@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Network Security
+  - AWS
   - Firewall
   - Intrusion Detection
+  - Network Security
   - VPC
-  - AWS
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,8 +28,8 @@ apis:
     humanURL: https://aws.amazon.com/network-firewall/
     baseURL: https://network-firewall.amazonaws.com
     tags:
-      - Network Security
       - Firewall
+      - Network Security
       - VPC
     properties:
       - type: Documentation
