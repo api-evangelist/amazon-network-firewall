@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-availability-zone-structure.json",
+  "name": "AvailabilityZone",
+  "description": "AvailabilityZone schema from Amazon Network Firewall",
+  "type": "string"
+}

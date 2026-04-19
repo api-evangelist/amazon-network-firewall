@@ -1,0 +1,6 @@
+{
+  "CertificateArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "CertificateSerial": "example-string",
+  "Status": "active",
+  "StatusMessage": "active"
+}

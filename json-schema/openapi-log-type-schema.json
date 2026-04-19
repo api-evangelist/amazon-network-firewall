@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-log-type-schema.json",
+  "title": "LogType",
+  "description": "LogType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "ALERT",
+    "FLOW"
+  ]
+}

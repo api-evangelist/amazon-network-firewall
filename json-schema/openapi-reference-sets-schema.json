@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-reference-sets-schema.json",
+  "title": "ReferenceSets",
+  "description": "Contains a set of IP set references.",
+  "type": "object",
+  "properties": {
+    "IPSetReferences": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IPSetReferenceMap"
+        },
+        {
+          "description": "The list of IP set references."
+        }
+      ]
+    }
+  }
+}

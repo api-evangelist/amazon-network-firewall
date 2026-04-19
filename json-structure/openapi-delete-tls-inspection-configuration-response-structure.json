@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-delete-tls-inspection-configuration-response-structure.json",
+  "name": "DeleteTLSInspectionConfigurationResponse",
+  "description": "DeleteTLSInspectionConfigurationResponse schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "TLSInspectionConfigurationResponse": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TLSInspectionConfigurationResponse"
+        },
+        {
+          "description": "The high-level properties of a TLS inspection configuration. This, along with the <a>TLSInspectionConfiguration</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "TLSInspectionConfigurationResponse"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-capacity-usage-summary-schema.json",
+  "title": "CapacityUsageSummary",
+  "description": "The capacity usage summary of the resources used by the <a>ReferenceSets</a> in a firewall.",
+  "type": "object",
+  "properties": {
+    "CIDRs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CIDRSummary"
+        },
+        {
+          "description": "Describes the capacity usage of the CIDR blocks used by the IP set references in a firewall."
+        }
+      ]
+    }
+  }
+}

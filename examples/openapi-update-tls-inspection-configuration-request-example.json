@@ -1,0 +1,8 @@
+{
+  "TLSInspectionConfigurationArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TLSInspectionConfigurationName": "my-resource",
+  "TLSInspectionConfiguration": "example-string",
+  "Description": "example-string",
+  "EncryptionConfiguration": "example-string",
+  "UpdateToken": "example-string"
+}

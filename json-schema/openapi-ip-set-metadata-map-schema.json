@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-ip-set-metadata-map-schema.json",
+  "title": "IPSetMetadataMap",
+  "description": "IPSetMetadataMap schema from Amazon Network Firewall",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/IPSetMetadata"
+  }
+}

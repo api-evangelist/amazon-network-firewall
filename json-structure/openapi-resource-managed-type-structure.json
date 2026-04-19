@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-resource-managed-type-structure.json",
+  "name": "ResourceManagedType",
+  "description": "ResourceManagedType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "AWS_MANAGED_THREAT_SIGNATURES",
+    "AWS_MANAGED_DOMAIN_LISTS"
+  ]
+}

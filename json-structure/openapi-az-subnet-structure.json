@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-az-subnet-structure.json",
+  "name": "AzSubnet",
+  "description": "AzSubnet schema from Amazon Network Firewall",
+  "type": "string",
+  "pattern": "^subnet-[0-9a-f]+$"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-settings-structure.json",
+  "name": "Settings",
+  "description": "Settings schema from Amazon Network Firewall",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/Setting"
+  }
+}

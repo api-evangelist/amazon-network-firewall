@@ -1,0 +1,7 @@
+{
+  "NextToken": "example-string",
+  "MaxResults": "example-string",
+  "Scope": "example-string",
+  "ManagedType": "standard",
+  "Type": "standard"
+}

@@ -1,0 +1,5 @@
+{
+  "UpdateToken": "example-string",
+  "TLSInspectionConfiguration": "example-string",
+  "TLSInspectionConfigurationResponse": "example-string"
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-log-destination-permission-exception-schema.json",
+  "title": "LogDestinationPermissionException",
+  "description": "LogDestinationPermissionException schema from Amazon Network Firewall"
+}

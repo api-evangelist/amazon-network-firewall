@@ -1,0 +1,13 @@
+{
+  "FirewallPolicyName": "my-resource",
+  "FirewallPolicyArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FirewallPolicyId": "resource-abc123",
+  "Description": "example-string",
+  "FirewallPolicyStatus": "active",
+  "Tags": "example-string",
+  "ConsumedStatelessRuleCapacity": "example-string",
+  "ConsumedStatefulRuleCapacity": "example-string",
+  "NumberOfAssociations": "example-string",
+  "EncryptionConfiguration": "example-string",
+  "LastModifiedTime": "example-string"
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-limit-exceeded-exception-schema.json",
+  "title": "LimitExceededException",
+  "description": "LimitExceededException schema from Amazon Network Firewall"
+}

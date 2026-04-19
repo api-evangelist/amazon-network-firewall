@@ -1,0 +1,8 @@
+{
+  "Protocol": "example-string",
+  "Source": "example-string",
+  "SourcePort": "example-string",
+  "Direction": "example-string",
+  "Destination": "example-string",
+  "DestinationPort": "example-string"
+}

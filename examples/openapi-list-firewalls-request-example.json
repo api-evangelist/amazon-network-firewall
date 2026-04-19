@@ -1,0 +1,5 @@
+{
+  "NextToken": "example-string",
+  "VpcIds": "resource-abc123",
+  "MaxResults": "example-string"
+}

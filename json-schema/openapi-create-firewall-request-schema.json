@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-create-firewall-request-schema.json",
+  "title": "CreateFirewallRequest",
+  "description": "CreateFirewallRequest schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "FirewallName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The descriptive name of the firewall. You can't change the name of a firewall after you create it."
+        }
+      ]
+    },
+    "FirewallPolicyArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the <a>FirewallPolicy</a> that you want to use for the firewall."
+        }
+      ]
+    },
+    "VpcId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VpcId"
+        },
+        {
+          "description": "<p>The unique identifier of the VPC where Network Firewall should create the firewall. </p> <p>You can't change this setting after you create the firewall. </p>"
+        }
+      ]
+    },
+    "SubnetMappings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SubnetMappings"
+        },
+        {
+          "description": "The public subnets to use for your Network Firewall firewalls. Each subnet must belong to a different Availability Zone in the VPC. Network Firewall creates a firewall endpoint in each subnet. "
+        }
+      ]
+    },
+    "DeleteProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "A flag indicating whether it is possible to delete the firewall. A setting of <code>TRUE</code> indicates that the firewall is protected against deletion. Use this setting to protect against accidentally deleting a firewall that is in use. When you create a firewall, the operation initializes this flag to <code>TRUE</code>."
+        }
+      ]
+    },
+    "SubnetChangeProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "A setting indicating whether the firewall is protected against changes to the subnet associations. Use this setting to protect against accidentally modifying the subnet associations for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>."
+        }
+      ]
+    },
+    "FirewallPolicyChangeProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "A setting indicating whether the firewall is protected against a change to the firewall policy association. Use this setting to protect against accidentally modifying the firewall policy for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "A description of the firewall."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The key:value pairs to associate with the resource."
+        }
+      ]
+    },
+    "EncryptionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EncryptionConfiguration"
+        },
+        {
+          "description": "A complex type that contains settings for encryption of your firewall resources."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FirewallName",
+    "FirewallPolicyArn",
+    "VpcId",
+    "SubnetMappings"
+  ]
+}

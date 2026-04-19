@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-log-destination-type-schema.json",
+  "title": "LogDestinationType",
+  "description": "LogDestinationType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "S3",
+    "CloudWatchLogs",
+    "KinesisDataFirehose"
+  ],
+  "pattern": "[0-9A-Za-z]+"
+}

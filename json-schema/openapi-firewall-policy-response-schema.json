@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-firewall-policy-response-schema.json",
+  "title": "FirewallPolicyResponse",
+  "description": "The high-level properties of a firewall policy. This, along with the <a>FirewallPolicy</a>, define the policy. You can retrieve all objects for a firewall policy by calling <a>DescribeFirewallPolicy</a>. ",
+  "type": "object",
+  "properties": {
+    "FirewallPolicyName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The descriptive name of the firewall policy. You can't change the name of a firewall policy after you create it."
+        }
+      ]
+    },
+    "FirewallPolicyArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the firewall policy.</p> <note> <p>If this response is for a create request that had <code>DryRun</code> set to <code>TRUE</code>, then this ARN is a placeholder that isn't attached to a valid resource.</p> </note>"
+        }
+      ]
+    },
+    "FirewallPolicyId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "The unique identifier for the firewall policy. "
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "A description of the firewall policy."
+        }
+      ]
+    },
+    "FirewallPolicyStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceStatus"
+        },
+        {
+          "description": "The current status of the firewall policy. You can retrieve this for a firewall policy by calling <a>DescribeFirewallPolicy</a> and providing the firewall policy's name or ARN."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The key:value pairs to associate with the resource."
+        }
+      ]
+    },
+    "ConsumedStatelessRuleCapacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleCapacity"
+        },
+        {
+          "description": "The number of capacity units currently consumed by the policy's stateless rules."
+        }
+      ]
+    },
+    "ConsumedStatefulRuleCapacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleCapacity"
+        },
+        {
+          "description": "The number of capacity units currently consumed by the policy's stateful rules."
+        }
+      ]
+    },
+    "NumberOfAssociations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NumberOfAssociations"
+        },
+        {
+          "description": "The number of firewalls that are associated with this firewall policy."
+        }
+      ]
+    },
+    "EncryptionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EncryptionConfiguration"
+        },
+        {
+          "description": "A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall policy."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdateTime"
+        },
+        {
+          "description": "The last time that the firewall policy was changed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FirewallPolicyName",
+    "FirewallPolicyArn",
+    "FirewallPolicyId"
+  ]
+}

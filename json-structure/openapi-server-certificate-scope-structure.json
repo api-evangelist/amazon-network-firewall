@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-server-certificate-scope-structure.json",
+  "name": "ServerCertificateScope",
+  "description": "Settings that define the Secure Sockets Layer/Transport Layer Security (SSL/TLS) traffic that Network Firewall should decrypt for inspection by the stateful rule engine.",
+  "type": "object",
+  "properties": {
+    "Sources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Addresses"
+        },
+        {
+          "description": "The source IP addresses and address ranges to decrypt for inspection, in CIDR notation. If not specified, this matches with any source address."
+        }
+      ]
+    },
+    "Destinations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Addresses"
+        },
+        {
+          "description": "The destination IP addresses and address ranges to decrypt for inspection, in CIDR notation. If not specified, this matches with any destination address."
+        }
+      ]
+    },
+    "SourcePorts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortRanges"
+        },
+        {
+          "description": "<p>The source ports to decrypt for inspection, in Transmission Control Protocol (TCP) format. If not specified, this matches with any source port.</p> <p>You can specify individual ports, for example <code>1994</code>, and you can specify port ranges, such as <code>1990:1994</code>.</p>"
+        }
+      ]
+    },
+    "DestinationPorts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortRanges"
+        },
+        {
+          "description": "<p>The destination ports to decrypt for inspection, in Transmission Control Protocol (TCP) format. If not specified, this matches with any destination port.</p> <p>You can specify individual ports, for example <code>1994</code>, and you can specify port ranges, such as <code>1990:1994</code>.</p>"
+        }
+      ]
+    },
+    "Protocols": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProtocolNumbers"
+        },
+        {
+          "description": "The protocols to decrypt for inspection, specified using each protocol's assigned internet protocol number (IANA). Network Firewall currently supports only TCP."
+        }
+      ]
+    }
+  }
+}

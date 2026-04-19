@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-tcp-flag-structure.json",
+  "name": "TCPFlag",
+  "description": "TCPFlag schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "FIN",
+    "SYN",
+    "RST",
+    "PSH",
+    "ACK",
+    "URG",
+    "ECE",
+    "CWR"
+  ]
+}

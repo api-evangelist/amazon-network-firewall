@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-insufficient-capacity-exception-structure.json",
+  "name": "InsufficientCapacityException",
+  "description": "InsufficientCapacityException schema from Amazon Network Firewall"
+}

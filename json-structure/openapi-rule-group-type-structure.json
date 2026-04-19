@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-rule-group-type-structure.json",
+  "name": "RuleGroupType",
+  "description": "RuleGroupType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "STATELESS",
+    "STATEFUL"
+  ]
+}

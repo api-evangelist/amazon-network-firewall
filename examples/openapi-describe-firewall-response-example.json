@@ -1,0 +1,5 @@
+{
+  "UpdateToken": "example-string",
+  "Firewall": "example-string",
+  "FirewallStatus": "active"
+}

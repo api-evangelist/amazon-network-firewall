@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-override-action-structure.json",
+  "name": "OverrideAction",
+  "description": "OverrideAction schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "DROP_TO_ALERT"
+  ]
+}

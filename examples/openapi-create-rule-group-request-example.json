@@ -1,0 +1,12 @@
+{
+  "RuleGroupName": "my-resource",
+  "RuleGroup": "example-string",
+  "Rules": "example-string",
+  "Type": "standard",
+  "Description": "example-string",
+  "Capacity": "example-string",
+  "Tags": "example-string",
+  "DryRun": "example-string",
+  "EncryptionConfiguration": "example-string",
+  "SourceMetadata": "example-string"
+}

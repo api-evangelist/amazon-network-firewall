@@ -1,0 +1,49 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Network Firewall API Workflow
+  description: Workflow capability composing Amazon Network Firewall APIs for developers and operators.
+  tags:
+  - Amazon Network Firewall
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_SIGV4_AUTH: AWS_SIGV4_AUTH
+capability:
+  consumes:
+  - import: network_firewall
+    location: ./shared/network-firewall.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-network-firewall-api
+    description: Unified REST API for Amazon Network Firewall.
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Primary Amazon Network Firewall resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon Network Firewall resources
+        call: openapi.yml.list
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-network-firewall-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Network Firewall operations.
+    tools:
+    - name: list-openapi.yml
+      description: List and manage openapi.yml resources
+      hints:
+        readOnly: true
+        openWorld: true
+      call: openapi.yml.list
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,7 @@
+{
+  "Sources": "example-string",
+  "Destinations": "example-string",
+  "SourcePorts": "example-string",
+  "DestinationPorts": "example-string",
+  "Protocols": "example-string"
+}

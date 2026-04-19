@@ -1,0 +1,767 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "network": "https://network.amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ActionDefinition": {
+      "@id": "network:ActionDefinition",
+      "@type": "xsd:string"
+    },
+    "ActionName": {
+      "@id": "network:ActionName",
+      "@type": "xsd:string"
+    },
+    "Address": "network:Address",
+    "AddressDefinition": {
+      "@id": "network:AddressDefinition",
+      "@type": "xsd:string"
+    },
+    "Addresses": "network:Addresses",
+    "AssociateFirewallPolicyRequest": "network:AssociateFirewallPolicyRequest",
+    "AssociateFirewallPolicyResponse": "network:AssociateFirewallPolicyResponse",
+    "AssociateSubnetsRequest": "network:AssociateSubnetsRequest",
+    "AssociateSubnetsResponse": "network:AssociateSubnetsResponse",
+    "Attachment": {
+      "@id": "network:Attachment",
+      "@type": "xsd:string"
+    },
+    "AttachmentStatus": "network:AttachmentStatus",
+    "AvailabilityZone": "network:AvailabilityZone",
+    "AzSubnet": "network:AzSubnet",
+    "AzSubnets": "network:AzSubnets",
+    "Boolean": "network:Boolean",
+    "CIDRCount": "network:CIDRCount",
+    "CIDRSummary": "network:CIDRSummary",
+    "CapacityUsageSummary": {
+      "@id": "network:CapacityUsageSummary",
+      "@type": "xsd:string"
+    },
+    "Certificates": {
+      "@id": "network:Certificates",
+      "@type": "xsd:string"
+    },
+    "CollectionMember_String": "network:CollectionMember_String",
+    "ConfigurationSyncState": "network:ConfigurationSyncState",
+    "CreateFirewallPolicyRequest": "network:CreateFirewallPolicyRequest",
+    "CreateFirewallPolicyResponse": "network:CreateFirewallPolicyResponse",
+    "CreateFirewallRequest": "network:CreateFirewallRequest",
+    "CreateFirewallResponse": "network:CreateFirewallResponse",
+    "CreateRuleGroupRequest": "network:CreateRuleGroupRequest",
+    "CreateRuleGroupResponse": "network:CreateRuleGroupResponse",
+    "CreateTLSInspectionConfigurationRequest": "network:CreateTLSInspectionConfigurationRequest",
+    "CreateTLSInspectionConfigurationResponse": "network:CreateTLSInspectionConfigurationResponse",
+    "CustomAction": "network:CustomAction",
+    "CustomActions": {
+      "@id": "network:CustomActions",
+      "@type": "xsd:string"
+    },
+    "DeleteFirewallPolicyRequest": "network:DeleteFirewallPolicyRequest",
+    "DeleteFirewallPolicyResponse": "network:DeleteFirewallPolicyResponse",
+    "DeleteFirewallRequest": "network:DeleteFirewallRequest",
+    "DeleteFirewallResponse": "network:DeleteFirewallResponse",
+    "DeleteResourcePolicyRequest": "network:DeleteResourcePolicyRequest",
+    "DeleteResourcePolicyResponse": "network:DeleteResourcePolicyResponse",
+    "DeleteRuleGroupRequest": "network:DeleteRuleGroupRequest",
+    "DeleteRuleGroupResponse": "network:DeleteRuleGroupResponse",
+    "DeleteTLSInspectionConfigurationRequest": "network:DeleteTLSInspectionConfigurationRequest",
+    "DeleteTLSInspectionConfigurationResponse": "network:DeleteTLSInspectionConfigurationResponse",
+    "DescribeFirewallPolicyRequest": "network:DescribeFirewallPolicyRequest",
+    "DescribeFirewallPolicyResponse": "network:DescribeFirewallPolicyResponse",
+    "DescribeFirewallRequest": "network:DescribeFirewallRequest",
+    "DescribeFirewallResponse": "network:DescribeFirewallResponse",
+    "DescribeLoggingConfigurationRequest": "network:DescribeLoggingConfigurationRequest",
+    "DescribeLoggingConfigurationResponse": "network:DescribeLoggingConfigurationResponse",
+    "DescribeResourcePolicyRequest": "network:DescribeResourcePolicyRequest",
+    "DescribeResourcePolicyResponse": "network:DescribeResourcePolicyResponse",
+    "DescribeRuleGroupMetadataRequest": "network:DescribeRuleGroupMetadataRequest",
+    "DescribeRuleGroupMetadataResponse": "network:DescribeRuleGroupMetadataResponse",
+    "DescribeRuleGroupRequest": "network:DescribeRuleGroupRequest",
+    "DescribeRuleGroupResponse": "network:DescribeRuleGroupResponse",
+    "DescribeTLSInspectionConfigurationRequest": "network:DescribeTLSInspectionConfigurationRequest",
+    "DescribeTLSInspectionConfigurationResponse": "network:DescribeTLSInspectionConfigurationResponse",
+    "Description": {
+      "@id": "network:Description",
+      "@type": "xsd:string"
+    },
+    "Destination": {
+      "@id": "network:Destination",
+      "@type": "xsd:string"
+    },
+    "Dimension": "network:Dimension",
+    "DimensionValue": "network:DimensionValue",
+    "Dimensions": {
+      "@id": "network:Dimensions",
+      "@type": "xsd:string"
+    },
+    "DisassociateSubnetsRequest": "network:DisassociateSubnetsRequest",
+    "DisassociateSubnetsResponse": "network:DisassociateSubnetsResponse",
+    "EncryptionConfiguration": {
+      "@id": "network:EncryptionConfiguration",
+      "@type": "xsd:string"
+    },
+    "EncryptionType": "network:EncryptionType",
+    "EndpointId": {
+      "@id": "network:EndpointId",
+      "@type": "xsd:string"
+    },
+    "Firewall": {
+      "@id": "network:Firewall",
+      "@type": "xsd:string"
+    },
+    "FirewallMetadata": "network:FirewallMetadata",
+    "FirewallPolicies": {
+      "@id": "network:FirewallPolicies",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicy": {
+      "@id": "network:FirewallPolicy",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicyMetadata": "network:FirewallPolicyMetadata",
+    "FirewallPolicyResponse": {
+      "@id": "network:FirewallPolicyResponse",
+      "@type": "xsd:string"
+    },
+    "FirewallStatus": {
+      "@id": "network:FirewallStatus",
+      "@type": "xsd:string"
+    },
+    "FirewallStatusValue": "network:FirewallStatusValue",
+    "Firewalls": {
+      "@id": "network:Firewalls",
+      "@type": "xsd:string"
+    },
+    "Flags": {
+      "@id": "network:Flags",
+      "@type": "xsd:string"
+    },
+    "GeneratedRulesType": {
+      "@id": "network:GeneratedRulesType",
+      "@type": "xsd:string"
+    },
+    "HashMapKey": "network:HashMapKey",
+    "HashMapValue": "network:HashMapValue",
+    "Header": {
+      "@id": "network:Header",
+      "@type": "xsd:string"
+    },
+    "IPAddressType": {
+      "@id": "network:IPAddressType",
+      "@type": "xsd:string"
+    },
+    "IPSet": "network:IPSet",
+    "IPSetArn": "network:IPSetArn",
+    "IPSetMetadata": "network:IPSetMetadata",
+    "IPSetMetadataMap": "network:IPSetMetadataMap",
+    "IPSetReference": "network:IPSetReference",
+    "IPSetReferenceMap": "network:IPSetReferenceMap",
+    "IPSetReferenceName": "network:IPSetReferenceName",
+    "IPSets": {
+      "@id": "network:IPSets",
+      "@type": "xsd:string"
+    },
+    "InsufficientCapacityException": "network:InsufficientCapacityException",
+    "InternalServerError": "network:InternalServerError",
+    "InvalidOperationException": "network:InvalidOperationException",
+    "InvalidRequestException": "network:InvalidRequestException",
+    "InvalidResourcePolicyException": "network:InvalidResourcePolicyException",
+    "InvalidTokenException": "network:InvalidTokenException",
+    "KeyId": {
+      "@id": "network:KeyId",
+      "@type": "xsd:string"
+    },
+    "Keyword": {
+      "@id": "network:Keyword",
+      "@type": "xsd:string"
+    },
+    "LastUpdateTime": "network:LastUpdateTime",
+    "LimitExceededException": "network:LimitExceededException",
+    "ListFirewallPoliciesRequest": "network:ListFirewallPoliciesRequest",
+    "ListFirewallPoliciesResponse": "network:ListFirewallPoliciesResponse",
+    "ListFirewallsRequest": "network:ListFirewallsRequest",
+    "ListFirewallsResponse": "network:ListFirewallsResponse",
+    "ListRuleGroupsRequest": "network:ListRuleGroupsRequest",
+    "ListRuleGroupsResponse": "network:ListRuleGroupsResponse",
+    "ListTLSInspectionConfigurationsRequest": "network:ListTLSInspectionConfigurationsRequest",
+    "ListTLSInspectionConfigurationsResponse": "network:ListTLSInspectionConfigurationsResponse",
+    "ListTagsForResourceRequest": "network:ListTagsForResourceRequest",
+    "ListTagsForResourceResponse": "network:ListTagsForResourceResponse",
+    "LogDestinationConfig": "network:LogDestinationConfig",
+    "LogDestinationConfigs": {
+      "@id": "network:LogDestinationConfigs",
+      "@type": "xsd:string"
+    },
+    "LogDestinationMap": "network:LogDestinationMap",
+    "LogDestinationPermissionException": "network:LogDestinationPermissionException",
+    "LogDestinationType": {
+      "@id": "network:LogDestinationType",
+      "@type": "xsd:string"
+    },
+    "LogType": {
+      "@id": "network:LogType",
+      "@type": "xsd:string"
+    },
+    "LoggingConfiguration": {
+      "@id": "network:LoggingConfiguration",
+      "@type": "xsd:string"
+    },
+    "MatchAttributes": {
+      "@id": "network:MatchAttributes",
+      "@type": "xsd:string"
+    },
+    "NumberOfAssociations": {
+      "@id": "network:NumberOfAssociations",
+      "@type": "xsd:string"
+    },
+    "OverrideAction": "network:OverrideAction",
+    "PaginationMaxResults": "network:PaginationMaxResults",
+    "PaginationToken": "network:PaginationToken",
+    "PerObjectStatus": "network:PerObjectStatus",
+    "PerObjectSyncStatus": "network:PerObjectSyncStatus",
+    "PolicyString": "network:PolicyString",
+    "Port": "network:Port",
+    "PortRange": "network:PortRange",
+    "PortRangeBound": "network:PortRangeBound",
+    "PortRanges": "network:PortRanges",
+    "PortSet": "network:PortSet",
+    "PortSets": {
+      "@id": "network:PortSets",
+      "@type": "xsd:string"
+    },
+    "Priority": {
+      "@id": "network:Priority",
+      "@type": "xsd:string"
+    },
+    "ProtocolNumber": "network:ProtocolNumber",
+    "ProtocolNumbers": "network:ProtocolNumbers",
+    "PublishMetricAction": {
+      "@id": "network:PublishMetricAction",
+      "@type": "xsd:string"
+    },
+    "PutResourcePolicyRequest": "network:PutResourcePolicyRequest",
+    "PutResourcePolicyResponse": "network:PutResourcePolicyResponse",
+    "ReferenceSets": {
+      "@id": "network:ReferenceSets",
+      "@type": "xsd:string"
+    },
+    "ResourceArn": {
+      "@id": "network:ResourceArn",
+      "@type": "xsd:string"
+    },
+    "ResourceId": "network:ResourceId",
+    "ResourceManagedStatus": "network:ResourceManagedStatus",
+    "ResourceManagedType": "network:ResourceManagedType",
+    "ResourceName": "network:ResourceName",
+    "ResourceNotFoundException": "network:ResourceNotFoundException",
+    "ResourceOwnerCheckException": "network:ResourceOwnerCheckException",
+    "ResourceStatus": "network:ResourceStatus",
+    "RuleCapacity": "network:RuleCapacity",
+    "RuleDefinition": {
+      "@id": "network:RuleDefinition",
+      "@type": "xsd:string"
+    },
+    "RuleGroup": {
+      "@id": "network:RuleGroup",
+      "@type": "xsd:string"
+    },
+    "RuleGroupMetadata": "network:RuleGroupMetadata",
+    "RuleGroupResponse": {
+      "@id": "network:RuleGroupResponse",
+      "@type": "xsd:string"
+    },
+    "RuleGroupType": "network:RuleGroupType",
+    "RuleGroups": {
+      "@id": "network:RuleGroups",
+      "@type": "xsd:string"
+    },
+    "RuleOption": "network:RuleOption",
+    "RuleOptions": {
+      "@id": "network:RuleOptions",
+      "@type": "xsd:string"
+    },
+    "RuleOrder": {
+      "@id": "network:RuleOrder",
+      "@type": "xsd:string"
+    },
+    "RuleTargets": "network:RuleTargets",
+    "RuleVariableName": "network:RuleVariableName",
+    "RuleVariables": {
+      "@id": "network:RuleVariables",
+      "@type": "xsd:string"
+    },
+    "RulesSource": {
+      "@id": "network:RulesSource",
+      "@type": "xsd:string"
+    },
+    "RulesSourceList": {
+      "@id": "network:RulesSourceList",
+      "@type": "xsd:string"
+    },
+    "RulesString": {
+      "@id": "network:RulesString",
+      "@type": "xsd:string"
+    },
+    "ServerCertificate": "network:ServerCertificate",
+    "ServerCertificateConfiguration": "network:ServerCertificateConfiguration",
+    "ServerCertificateConfigurations": {
+      "@id": "network:ServerCertificateConfigurations",
+      "@type": "xsd:string"
+    },
+    "ServerCertificateScope": "network:ServerCertificateScope",
+    "ServerCertificateScopes": "network:ServerCertificateScopes",
+    "ServerCertificates": {
+      "@id": "network:ServerCertificates",
+      "@type": "xsd:string"
+    },
+    "Setting": "network:Setting",
+    "Settings": {
+      "@id": "network:Settings",
+      "@type": "xsd:string"
+    },
+    "Source": {
+      "@id": "network:Source",
+      "@type": "xsd:string"
+    },
+    "SourceMetadata": {
+      "@id": "network:SourceMetadata",
+      "@type": "xsd:string"
+    },
+    "StatefulAction": "network:StatefulAction",
+    "StatefulActions": "network:StatefulActions",
+    "StatefulEngineOptions": {
+      "@id": "network:StatefulEngineOptions",
+      "@type": "xsd:string"
+    },
+    "StatefulRule": "network:StatefulRule",
+    "StatefulRuleDirection": "network:StatefulRuleDirection",
+    "StatefulRuleGroupOverride": "network:StatefulRuleGroupOverride",
+    "StatefulRuleGroupReference": "network:StatefulRuleGroupReference",
+    "StatefulRuleGroupReferences": {
+      "@id": "network:StatefulRuleGroupReferences",
+      "@type": "xsd:string"
+    },
+    "StatefulRuleOptions": {
+      "@id": "network:StatefulRuleOptions",
+      "@type": "xsd:string"
+    },
+    "StatefulRuleProtocol": "network:StatefulRuleProtocol",
+    "StatefulRules": {
+      "@id": "network:StatefulRules",
+      "@type": "xsd:string"
+    },
+    "StatelessActions": "network:StatelessActions",
+    "StatelessRule": "network:StatelessRule",
+    "StatelessRuleGroupReference": "network:StatelessRuleGroupReference",
+    "StatelessRuleGroupReferences": {
+      "@id": "network:StatelessRuleGroupReferences",
+      "@type": "xsd:string"
+    },
+    "StatelessRules": {
+      "@id": "network:StatelessRules",
+      "@type": "xsd:string"
+    },
+    "StatelessRulesAndCustomActions": {
+      "@id": "network:StatelessRulesAndCustomActions",
+      "@type": "xsd:string"
+    },
+    "StatusMessage": {
+      "@id": "network:StatusMessage",
+      "@type": "xsd:string"
+    },
+    "StatusReason": "network:StatusReason",
+    "StreamExceptionPolicy": {
+      "@id": "network:StreamExceptionPolicy",
+      "@type": "xsd:string"
+    },
+    "SubnetMapping": "network:SubnetMapping",
+    "SubnetMappings": {
+      "@id": "network:SubnetMappings",
+      "@type": "xsd:string"
+    },
+    "SyncState": "network:SyncState",
+    "SyncStateConfig": "network:SyncStateConfig",
+    "SyncStates": {
+      "@id": "network:SyncStates",
+      "@type": "xsd:string"
+    },
+    "TCPFlag": "network:TCPFlag",
+    "TCPFlagField": "network:TCPFlagField",
+    "TCPFlags": {
+      "@id": "network:TCPFlags",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfiguration": {
+      "@id": "network:TLSInspectionConfiguration",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfigurationMetadata": "network:TLSInspectionConfigurationMetadata",
+    "TLSInspectionConfigurationResponse": {
+      "@id": "network:TLSInspectionConfigurationResponse",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfigurations": {
+      "@id": "network:TLSInspectionConfigurations",
+      "@type": "xsd:string"
+    },
+    "Tag": "network:Tag",
+    "TagKey": "network:TagKey",
+    "TagKeyList": "network:TagKeyList",
+    "TagList": "network:TagList",
+    "TagResourceRequest": "network:TagResourceRequest",
+    "TagResourceResponse": "network:TagResourceResponse",
+    "TagValue": "network:TagValue",
+    "TagsPaginationMaxResults": "network:TagsPaginationMaxResults",
+    "TargetType": "network:TargetType",
+    "TargetTypes": {
+      "@id": "network:TargetTypes",
+      "@type": "xsd:string"
+    },
+    "ThrottlingException": "network:ThrottlingException",
+    "TlsCertificateData": "network:TlsCertificateData",
+    "UnsupportedOperationException": "network:UnsupportedOperationException",
+    "UntagResourceRequest": "network:UntagResourceRequest",
+    "UntagResourceResponse": "network:UntagResourceResponse",
+    "UpdateFirewallDeleteProtectionRequest": "network:UpdateFirewallDeleteProtectionRequest",
+    "UpdateFirewallDeleteProtectionResponse": "network:UpdateFirewallDeleteProtectionResponse",
+    "UpdateFirewallDescriptionRequest": "network:UpdateFirewallDescriptionRequest",
+    "UpdateFirewallDescriptionResponse": "network:UpdateFirewallDescriptionResponse",
+    "UpdateFirewallEncryptionConfigurationRequest": "network:UpdateFirewallEncryptionConfigurationRequest",
+    "UpdateFirewallEncryptionConfigurationResponse": "network:UpdateFirewallEncryptionConfigurationResponse",
+    "UpdateFirewallPolicyChangeProtectionRequest": "network:UpdateFirewallPolicyChangeProtectionRequest",
+    "UpdateFirewallPolicyChangeProtectionResponse": "network:UpdateFirewallPolicyChangeProtectionResponse",
+    "UpdateFirewallPolicyRequest": "network:UpdateFirewallPolicyRequest",
+    "UpdateFirewallPolicyResponse": "network:UpdateFirewallPolicyResponse",
+    "UpdateLoggingConfigurationRequest": "network:UpdateLoggingConfigurationRequest",
+    "UpdateLoggingConfigurationResponse": "network:UpdateLoggingConfigurationResponse",
+    "UpdateRuleGroupRequest": "network:UpdateRuleGroupRequest",
+    "UpdateRuleGroupResponse": "network:UpdateRuleGroupResponse",
+    "UpdateSubnetChangeProtectionRequest": "network:UpdateSubnetChangeProtectionRequest",
+    "UpdateSubnetChangeProtectionResponse": "network:UpdateSubnetChangeProtectionResponse",
+    "UpdateTLSInspectionConfigurationRequest": "network:UpdateTLSInspectionConfigurationRequest",
+    "UpdateTLSInspectionConfigurationResponse": "network:UpdateTLSInspectionConfigurationResponse",
+    "UpdateToken": {
+      "@id": "network:UpdateToken",
+      "@type": "xsd:string"
+    },
+    "VariableDefinition": "network:VariableDefinition",
+    "VariableDefinitionList": "network:VariableDefinitionList",
+    "VpcId": {
+      "@id": "network:VpcId",
+      "@type": "xsd:string"
+    },
+    "VpcIds": {
+      "@id": "network:VpcIds",
+      "@type": "xsd:string"
+    },
+    "Action": {
+      "@id": "network:Action",
+      "@type": "xsd:string"
+    },
+    "Actions": {
+      "@id": "network:Actions",
+      "@type": "xsd:string"
+    },
+    "Arn": {
+      "@id": "network:Arn",
+      "@type": "xsd:string"
+    },
+    "AvailableCIDRCount": {
+      "@id": "network:AvailableCIDRCount",
+      "@type": "xsd:string"
+    },
+    "CIDRs": {
+      "@id": "network:CIDRs",
+      "@type": "xsd:string"
+    },
+    "Capacity": {
+      "@id": "network:Capacity",
+      "@type": "xsd:string"
+    },
+    "CertificateArn": {
+      "@id": "network:CertificateArn",
+      "@type": "xsd:string"
+    },
+    "CertificateSerial": {
+      "@id": "network:CertificateSerial",
+      "@type": "xsd:string"
+    },
+    "Config": {
+      "@id": "network:Config",
+      "@type": "xsd:string"
+    },
+    "ConfigurationSyncStateSummary": {
+      "@id": "network:ConfigurationSyncStateSummary",
+      "@type": "xsd:string"
+    },
+    "ConsumedCapacity": {
+      "@id": "network:ConsumedCapacity",
+      "@type": "xsd:string"
+    },
+    "ConsumedStatefulRuleCapacity": {
+      "@id": "network:ConsumedStatefulRuleCapacity",
+      "@type": "xsd:string"
+    },
+    "ConsumedStatelessRuleCapacity": {
+      "@id": "network:ConsumedStatelessRuleCapacity",
+      "@type": "xsd:string"
+    },
+    "Definition": {
+      "@id": "network:Definition",
+      "@type": "xsd:string"
+    },
+    "DeleteProtection": {
+      "@id": "network:DeleteProtection",
+      "@type": "xsd:string"
+    },
+    "DestinationPort": {
+      "@id": "network:DestinationPort",
+      "@type": "xsd:string"
+    },
+    "DestinationPorts": {
+      "@id": "network:DestinationPorts",
+      "@type": "xsd:string"
+    },
+    "Destinations": {
+      "@id": "network:Destinations",
+      "@type": "xsd:string"
+    },
+    "Direction": {
+      "@id": "network:Direction",
+      "@type": "xsd:string"
+    },
+    "DryRun": {
+      "@id": "network:DryRun",
+      "@type": "xsd:string"
+    },
+    "FirewallArn": {
+      "@id": "network:FirewallArn",
+      "@type": "xsd:string"
+    },
+    "FirewallId": {
+      "@id": "network:FirewallId",
+      "@type": "xsd:string"
+    },
+    "FirewallName": {
+      "@id": "network:FirewallName",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicyArn": {
+      "@id": "network:FirewallPolicyArn",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicyChangeProtection": {
+      "@id": "network:FirewallPolicyChangeProtection",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicyId": {
+      "@id": "network:FirewallPolicyId",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicyName": {
+      "@id": "network:FirewallPolicyName",
+      "@type": "xsd:string"
+    },
+    "FirewallPolicyStatus": {
+      "@id": "network:FirewallPolicyStatus",
+      "@type": "xsd:string"
+    },
+    "FromPort": {
+      "@id": "network:FromPort",
+      "@type": "xsd:string"
+    },
+    "IPSetReferences": {
+      "@id": "network:IPSetReferences",
+      "@type": "xsd:string"
+    },
+    "Key": {
+      "@id": "network:Key",
+      "@type": "xsd:string"
+    },
+    "LastModifiedTime": {
+      "@id": "network:LastModifiedTime",
+      "@type": "xsd:string"
+    },
+    "LogDestination": {
+      "@id": "network:LogDestination",
+      "@type": "xsd:string"
+    },
+    "ManagedType": {
+      "@id": "network:ManagedType",
+      "@type": "xsd:string"
+    },
+    "Masks": {
+      "@id": "network:Masks",
+      "@type": "xsd:string"
+    },
+    "MaxResults": {
+      "@id": "network:MaxResults",
+      "@type": "xsd:string"
+    },
+    "Name": {
+      "@id": "network:Name",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "network:NextToken",
+      "@type": "xsd:string"
+    },
+    "Override": {
+      "@id": "network:Override",
+      "@type": "xsd:string"
+    },
+    "Policy": {
+      "@id": "network:Policy",
+      "@type": "xsd:string"
+    },
+    "Protocol": {
+      "@id": "network:Protocol",
+      "@type": "xsd:string"
+    },
+    "Protocols": {
+      "@id": "network:Protocols",
+      "@type": "xsd:string"
+    },
+    "ReferenceArn": {
+      "@id": "network:ReferenceArn",
+      "@type": "xsd:string"
+    },
+    "ResolvedCIDRCount": {
+      "@id": "network:ResolvedCIDRCount",
+      "@type": "xsd:string"
+    },
+    "RuleGroupArn": {
+      "@id": "network:RuleGroupArn",
+      "@type": "xsd:string"
+    },
+    "RuleGroupId": {
+      "@id": "network:RuleGroupId",
+      "@type": "xsd:string"
+    },
+    "RuleGroupName": {
+      "@id": "network:RuleGroupName",
+      "@type": "xsd:string"
+    },
+    "RuleGroupStatus": {
+      "@id": "network:RuleGroupStatus",
+      "@type": "xsd:string"
+    },
+    "Rules": {
+      "@id": "network:Rules",
+      "@type": "xsd:string"
+    },
+    "Scope": {
+      "@id": "network:Scope",
+      "@type": "xsd:string"
+    },
+    "Scopes": {
+      "@id": "network:Scopes",
+      "@type": "xsd:string"
+    },
+    "SnsTopic": {
+      "@id": "network:SnsTopic",
+      "@type": "xsd:string"
+    },
+    "SourceArn": {
+      "@id": "network:SourceArn",
+      "@type": "xsd:string"
+    },
+    "SourcePort": {
+      "@id": "network:SourcePort",
+      "@type": "xsd:string"
+    },
+    "SourcePorts": {
+      "@id": "network:SourcePorts",
+      "@type": "xsd:string"
+    },
+    "SourceUpdateToken": {
+      "@id": "network:SourceUpdateToken",
+      "@type": "xsd:string"
+    },
+    "Sources": {
+      "@id": "network:Sources",
+      "@type": "xsd:string"
+    },
+    "StatefulDefaultActions": {
+      "@id": "network:StatefulDefaultActions",
+      "@type": "xsd:string"
+    },
+    "StatelessCustomActions": {
+      "@id": "network:StatelessCustomActions",
+      "@type": "xsd:string"
+    },
+    "StatelessDefaultActions": {
+      "@id": "network:StatelessDefaultActions",
+      "@type": "xsd:string"
+    },
+    "StatelessFragmentDefaultActions": {
+      "@id": "network:StatelessFragmentDefaultActions",
+      "@type": "xsd:string"
+    },
+    "Status": {
+      "@id": "network:Status",
+      "@type": "xsd:string"
+    },
+    "SubnetChangeProtection": {
+      "@id": "network:SubnetChangeProtection",
+      "@type": "xsd:string"
+    },
+    "SubnetId": {
+      "@id": "network:SubnetId",
+      "@type": "xsd:string"
+    },
+    "SubnetIds": {
+      "@id": "network:SubnetIds",
+      "@type": "xsd:string"
+    },
+    "SyncStatus": {
+      "@id": "network:SyncStatus",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfigurationArn": {
+      "@id": "network:TLSInspectionConfigurationArn",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfigurationId": {
+      "@id": "network:TLSInspectionConfigurationId",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfigurationName": {
+      "@id": "network:TLSInspectionConfigurationName",
+      "@type": "xsd:string"
+    },
+    "TLSInspectionConfigurationStatus": {
+      "@id": "network:TLSInspectionConfigurationStatus",
+      "@type": "xsd:string"
+    },
+    "TagKeys": {
+      "@id": "network:TagKeys",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "network:Tags",
+      "@type": "xsd:string"
+    },
+    "Targets": {
+      "@id": "network:Targets",
+      "@type": "xsd:string"
+    },
+    "ToPort": {
+      "@id": "network:ToPort",
+      "@type": "xsd:string"
+    },
+    "Type": {
+      "@id": "network:Type",
+      "@type": "xsd:string"
+    },
+    "UtilizedCIDRCount": {
+      "@id": "network:UtilizedCIDRCount",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "network:Value",
+      "@type": "xsd:string"
+    }
+  }
+}

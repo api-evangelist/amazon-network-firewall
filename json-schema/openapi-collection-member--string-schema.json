@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-collection-member--string-schema.json",
+  "title": "CollectionMember_String",
+  "description": "CollectionMember_String schema from Amazon Network Firewall",
+  "type": "string"
+}

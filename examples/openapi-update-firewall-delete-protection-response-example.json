@@ -1,0 +1,6 @@
+{
+  "FirewallArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FirewallName": "my-resource",
+  "DeleteProtection": "example-string",
+  "UpdateToken": "example-string"
+}

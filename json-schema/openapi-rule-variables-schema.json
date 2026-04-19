@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-rule-variables-schema.json",
+  "title": "RuleVariables",
+  "description": "Settings that are available for use in the rules in the <a>RuleGroup</a> where this is defined. ",
+  "type": "object",
+  "properties": {
+    "IPSets": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IPSets"
+        },
+        {
+          "description": "A list of IP addresses and address ranges, in CIDR notation. "
+        }
+      ]
+    },
+    "PortSets": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortSets"
+        },
+        {
+          "description": "A list of port ranges. "
+        }
+      ]
+    }
+  }
+}

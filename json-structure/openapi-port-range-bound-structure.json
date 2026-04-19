@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-port-range-bound-structure.json",
+  "name": "PortRangeBound",
+  "description": "PortRangeBound schema from Amazon Network Firewall",
+  "type": "int32",
+  "minimum": 0,
+  "maximum": 65535
+}

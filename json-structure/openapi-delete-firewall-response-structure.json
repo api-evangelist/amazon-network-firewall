@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-delete-firewall-response-structure.json",
+  "name": "DeleteFirewallResponse",
+  "description": "DeleteFirewallResponse schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "Firewall": {
+      "$ref": "#/components/schemas/Firewall"
+    },
+    "FirewallStatus": {
+      "$ref": "#/components/schemas/FirewallStatus"
+    }
+  }
+}

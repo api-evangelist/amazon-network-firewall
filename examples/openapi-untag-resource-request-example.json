@@ -1,0 +1,4 @@
+{
+  "ResourceArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TagKeys": "example-string"
+}

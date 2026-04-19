@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-stateful-rule-protocol-schema.json",
+  "title": "StatefulRuleProtocol",
+  "description": "StatefulRuleProtocol schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "IP",
+    "TCP",
+    "UDP",
+    "ICMP",
+    "HTTP",
+    "FTP",
+    "TLS",
+    "SMB",
+    "DNS",
+    "DCERPC",
+    "SSH",
+    "SMTP",
+    "IMAP",
+    "MSN",
+    "KRB5",
+    "IKEV2",
+    "TFTP",
+    "NTP",
+    "DHCP"
+  ]
+}

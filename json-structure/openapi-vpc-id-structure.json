@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-vpc-id-structure.json",
+  "name": "VpcId",
+  "description": "VpcId schema from Amazon Network Firewall",
+  "type": "string",
+  "pattern": "^vpc-[0-9a-f]+$"
+}

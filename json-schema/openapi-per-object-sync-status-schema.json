@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-per-object-sync-status-schema.json",
+  "title": "PerObjectSyncStatus",
+  "description": "PerObjectSyncStatus schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "PENDING",
+    "IN_SYNC",
+    "CAPACITY_CONSTRAINED"
+  ]
+}

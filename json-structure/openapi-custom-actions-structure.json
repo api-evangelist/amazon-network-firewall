@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-custom-actions-structure.json",
+  "name": "CustomActions",
+  "description": "CustomActions schema from Amazon Network Firewall",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/CustomAction"
+  }
+}

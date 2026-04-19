@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-ip-set-metadata-schema.json",
+  "title": "IPSetMetadata",
+  "description": "General information about the IP set.",
+  "type": "object",
+  "properties": {
+    "ResolvedCIDRCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CIDRCount"
+        },
+        {
+          "description": "Describes the total number of CIDR blocks currently in use by the IP set references in a firewall. To determine how many CIDR blocks are available for you to use in a firewall, you can call <code>AvailableCIDRCount</code>."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-stateful-action-schema.json",
+  "title": "StatefulAction",
+  "description": "StatefulAction schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "PASS",
+    "DROP",
+    "ALERT",
+    "REJECT"
+  ]
+}

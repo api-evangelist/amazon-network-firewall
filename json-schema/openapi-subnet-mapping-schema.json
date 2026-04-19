@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-subnet-mapping-schema.json",
+  "title": "SubnetMapping",
+  "description": "The ID for a subnet that you want to associate with the firewall. This is used with <a>CreateFirewall</a> and <a>AssociateSubnets</a>. Network Firewall creates an instance of the associated firewall in each subnet that you specify, to filter traffic in the subnet's Availability Zone.",
+  "type": "object",
+  "properties": {
+    "SubnetId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CollectionMember_String"
+        },
+        {
+          "description": "The unique identifier for the subnet. "
+        }
+      ]
+    },
+    "IPAddressType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IPAddressType"
+        },
+        {
+          "description": "The subnet's IP address type. You can't change the IP address type after you create the subnet."
+        }
+      ]
+    }
+  },
+  "required": [
+    "SubnetId"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "TLSInspectionConfigurationArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "TLSInspectionConfigurationName": "my-resource",
+  "TLSInspectionConfigurationId": "resource-abc123",
+  "TLSInspectionConfigurationStatus": "active",
+  "Description": "example-string",
+  "Tags": "example-string",
+  "LastModifiedTime": "example-string",
+  "NumberOfAssociations": "example-string",
+  "EncryptionConfiguration": "example-string",
+  "Certificates": "example-string"
+}

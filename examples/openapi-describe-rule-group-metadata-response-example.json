@@ -1,0 +1,9 @@
+{
+  "RuleGroupArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "RuleGroupName": "my-resource",
+  "Description": "example-string",
+  "Type": "standard",
+  "Capacity": "example-string",
+  "StatefulRuleOptions": "example-ref",
+  "LastModifiedTime": "example-string"
+}

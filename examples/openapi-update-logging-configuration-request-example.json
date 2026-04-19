@@ -1,0 +1,5 @@
+{
+  "FirewallArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FirewallName": "my-resource",
+  "LoggingConfiguration": "example-string"
+}

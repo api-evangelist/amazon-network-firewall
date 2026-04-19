@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-tags-pagination-max-results-structure.json",
+  "name": "TagsPaginationMaxResults",
+  "description": "TagsPaginationMaxResults schema from Amazon Network Firewall",
+  "type": "int32",
+  "minimum": 0,
+  "maximum": 100
+}

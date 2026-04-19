@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-encryption-type-structure.json",
+  "name": "EncryptionType",
+  "description": "EncryptionType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "CUSTOMER_KMS",
+    "AWS_OWNED_KMS_KEY"
+  ]
+}

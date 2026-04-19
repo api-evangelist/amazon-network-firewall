@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-status-reason-structure.json",
+  "name": "StatusReason",
+  "description": "StatusReason schema from Amazon Network Firewall",
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9- ]+$"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-generated-rules-type-structure.json",
+  "name": "GeneratedRulesType",
+  "description": "GeneratedRulesType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "ALLOWLIST",
+    "DENYLIST"
+  ]
+}

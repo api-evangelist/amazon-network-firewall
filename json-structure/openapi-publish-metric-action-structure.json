@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-publish-metric-action-structure.json",
+  "name": "PublishMetricAction",
+  "description": "Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. This setting defines a CloudWatch dimension value to be published.",
+  "type": "object",
+  "properties": {
+    "Dimensions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Dimensions"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "Dimensions"
+  ]
+}

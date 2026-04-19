@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-stateless-rules-and-custom-actions-schema.json",
+  "title": "StatelessRulesAndCustomActions",
+  "description": "Stateless inspection criteria. Each stateless rule group uses exactly one of these data types to define its stateless rules. ",
+  "type": "object",
+  "properties": {
+    "StatelessRules": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StatelessRules"
+        },
+        {
+          "description": "Defines the set of stateless rules for use in a stateless rule group. "
+        }
+      ]
+    },
+    "CustomActions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomActions"
+        },
+        {
+          "description": "Defines an array of individual custom action definitions that are available for use by the stateless rules in this <code>StatelessRulesAndCustomActions</code> specification. You name each custom action that you define, and then you can use it by name in your <a>StatelessRule</a> <a>RuleDefinition</a> <code>Actions</code> specification."
+        }
+      ]
+    }
+  },
+  "required": [
+    "StatelessRules"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-update-logging-configuration-response-structure.json",
+  "name": "UpdateLoggingConfigurationResponse",
+  "description": "UpdateLoggingConfigurationResponse schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "FirewallArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the firewall."
+        }
+      ]
+    },
+    "FirewallName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The descriptive name of the firewall. You can't change the name of a firewall after you create it."
+        }
+      ]
+    },
+    "LoggingConfiguration": {
+      "$ref": "#/components/schemas/LoggingConfiguration"
+    }
+  }
+}

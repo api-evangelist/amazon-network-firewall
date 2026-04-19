@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-stateless-rule-group-reference-schema.json",
+  "title": "StatelessRuleGroupReference",
+  "description": "Identifier for a single stateless rule group, used in a firewall policy to refer to the rule group. ",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the stateless rule group."
+        }
+      ]
+    },
+    "Priority": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Priority"
+        },
+        {
+          "description": "An integer setting that indicates the order in which to run the stateless rule groups in a single <a>FirewallPolicy</a>. Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting. You must ensure that the priority settings are unique within each policy."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceArn",
+    "Priority"
+  ]
+}

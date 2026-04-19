@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-untag-resource-request-structure.json",
+  "name": "UntagResourceRequest",
+  "description": "UntagResourceRequest schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the resource."
+        }
+      ]
+    },
+    "TagKeys": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKeyList"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceArn",
+    "TagKeys"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-tls-certificate-data-schema.json",
+  "title": "TlsCertificateData",
+  "description": "Contains metadata about an Certificate Manager certificate.",
+  "type": "object",
+  "properties": {
+    "CertificateArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the certificate."
+        }
+      ]
+    },
+    "CertificateSerial": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CollectionMember_String"
+        },
+        {
+          "description": "The serial number of the certificate."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CollectionMember_String"
+        },
+        {
+          "description": "The status of the certificate."
+        }
+      ]
+    },
+    "StatusMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StatusReason"
+        },
+        {
+          "description": "Contains details about the certificate status, including information about certificate errors."
+        }
+      ]
+    }
+  }
+}

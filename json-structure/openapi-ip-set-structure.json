@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-ip-set-structure.json",
+  "name": "IPSet",
+  "description": "A list of IP addresses and address ranges, in CIDR notation. This is part of a <a>RuleVariables</a>. ",
+  "type": "object",
+  "properties": {
+    "Definition": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VariableDefinitionList"
+        },
+        {
+          "description": "The list of IP addresses and address ranges, in CIDR notation. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "Definition"
+  ]
+}

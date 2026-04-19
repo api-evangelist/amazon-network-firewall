@@ -1,0 +1,5 @@
+{
+  "LogType": "standard",
+  "LogDestinationType": "standard",
+  "LogDestination": "example-string"
+}

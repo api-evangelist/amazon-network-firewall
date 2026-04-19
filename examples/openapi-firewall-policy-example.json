@@ -1,0 +1,10 @@
+{
+  "StatelessRuleGroupReferences": "example-string",
+  "StatelessDefaultActions": "example-string",
+  "StatelessFragmentDefaultActions": "example-string",
+  "StatelessCustomActions": "example-string",
+  "StatefulRuleGroupReferences": "example-string",
+  "StatefulDefaultActions": "example-string",
+  "StatefulEngineOptions": "example-string",
+  "TLSInspectionConfigurationArn": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

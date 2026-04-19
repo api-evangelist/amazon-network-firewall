@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-log-destination-config-schema.json",
+  "title": "LogDestinationConfig",
+  "description": "<p>Defines where Network Firewall sends logs for the firewall for one log type. This is used in <a>LoggingConfiguration</a>. You can send each type of log to an Amazon S3 bucket, a CloudWatch log group, or a Kinesis Data Firehose delivery stream.</p> <p>Network Firewall generates logs for stateful rule groups. You can save alert and flow log types. The stateful rules engine records flow logs for all network traffic that it receives. It records alert logs for traffic that matches stateful rules that have the rule action set to <code>DROP</code> or <code>ALERT</code>. </p>",
+  "type": "object",
+  "properties": {
+    "LogType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LogType"
+        },
+        {
+          "description": "The type of log to send. Alert logs report traffic that matches a <a>StatefulRule</a> with an action setting that sends an alert log message. Flow logs are standard network traffic flow logs. "
+        }
+      ]
+    },
+    "LogDestinationType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LogDestinationType"
+        },
+        {
+          "description": "The type of storage destination to send these logs to. You can send logs to an Amazon S3 bucket, a CloudWatch log group, or a Kinesis Data Firehose delivery stream."
+        }
+      ]
+    },
+    "LogDestination": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LogDestinationMap"
+        },
+        {
+          "description": "<p>The named location for the logs, provided in a key:value mapping that is specific to the chosen destination type. </p> <ul> <li> <p>For an Amazon S3 bucket, provide the name of the bucket, with key <code>bucketName</code>, and optionally provide a prefix, with key <code>prefix</code>. The following example specifies an Amazon S3 bucket named <code>DOC-EXAMPLE-BUCKET</code> and the prefix <code>alerts</code>: </p> <p> <code>\"LogDestination\": { \"bucketName\": \"DOC-EXAMPLE-BUCKET\", \"prefix\": \"alerts\" }</code> </p> </li> <li> <p>For a CloudWatch log group, provide the name of the CloudWatch log group, with key <code>logGroup</code>. The following example specifies a log group named <code>alert-log-group</code>: </p> <p> <code>\"LogDestination\": { \"logGroup\": \"alert-log-group\" }</code> </p> </li> <li> <p>For a Kinesis Data Firehose delivery stream, provide the name of the delivery stream, with key <code>deliveryStream</code>. The following example specifies a delivery stream named <code>alert-delivery-stream</code>: </p> <p> <code>\"LogDestination\": { \"deliveryStream\": \"alert-delivery-stream\" }</code> </p> </li> </ul>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "LogType",
+    "LogDestinationType",
+    "LogDestination"
+  ]
+}

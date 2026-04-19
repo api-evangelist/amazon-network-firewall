@@ -1,0 +1,5 @@
+{
+  "AvailableCIDRCount": "resource-abc123",
+  "UtilizedCIDRCount": "resource-abc123",
+  "IPSetReferences": "example-string"
+}

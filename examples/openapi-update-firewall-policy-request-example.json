@@ -1,0 +1,9 @@
+{
+  "UpdateToken": "example-string",
+  "FirewallPolicyArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FirewallPolicyName": "my-resource",
+  "FirewallPolicy": "example-string",
+  "Description": "example-string",
+  "DryRun": "example-string",
+  "EncryptionConfiguration": "example-string"
+}

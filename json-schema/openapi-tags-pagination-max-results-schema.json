@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-tags-pagination-max-results-schema.json",
+  "title": "TagsPaginationMaxResults",
+  "description": "TagsPaginationMaxResults schema from Amazon Network Firewall",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 100
+}

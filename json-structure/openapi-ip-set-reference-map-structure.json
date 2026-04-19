@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-ip-set-reference-map-structure.json",
+  "name": "IPSetReferenceMap",
+  "description": "IPSetReferenceMap schema from Amazon Network Firewall",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/IPSetReference"
+  }
+}

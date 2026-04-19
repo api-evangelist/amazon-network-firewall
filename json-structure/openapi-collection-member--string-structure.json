@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-collection-member--string-structure.json",
+  "name": "CollectionMember_String",
+  "description": "CollectionMember_String schema from Amazon Network Firewall",
+  "type": "string"
+}

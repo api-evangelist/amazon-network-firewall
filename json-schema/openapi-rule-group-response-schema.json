@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-rule-group-response-schema.json",
+  "title": "RuleGroupResponse",
+  "description": "The high-level properties of a rule group. This, along with the <a>RuleGroup</a>, define the rule group. You can retrieve all objects for a rule group by calling <a>DescribeRuleGroup</a>. ",
+  "type": "object",
+  "properties": {
+    "RuleGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the rule group.</p> <note> <p>If this response is for a create request that had <code>DryRun</code> set to <code>TRUE</code>, then this ARN is a placeholder that isn't attached to a valid resource.</p> </note>"
+        }
+      ]
+    },
+    "RuleGroupName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The descriptive name of the rule group. You can't change the name of a rule group after you create it."
+        }
+      ]
+    },
+    "RuleGroupId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "The unique identifier for the rule group. "
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "A description of the rule group. "
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleGroupType"
+        },
+        {
+          "description": "Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless rules. If it is stateful, it contains stateful rules. "
+        }
+      ]
+    },
+    "Capacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleCapacity"
+        },
+        {
+          "description": "<p>The maximum operating resources that this rule group can use. Rule group capacity is fixed at creation. When you update a rule group, you are limited to this capacity. When you reference a rule group from a firewall policy, Network Firewall reserves this capacity for the rule group. </p> <p>You can retrieve the capacity that would be required for a rule group before you create the rule group by calling <a>CreateRuleGroup</a> with <code>DryRun</code> set to <code>TRUE</code>. </p>"
+        }
+      ]
+    },
+    "RuleGroupStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceStatus"
+        },
+        {
+          "description": "Detailed information about the current status of a rule group. "
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The key:value pairs to associate with the resource."
+        }
+      ]
+    },
+    "ConsumedCapacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleCapacity"
+        },
+        {
+          "description": "The number of capacity units currently consumed by the rule group rules. "
+        }
+      ]
+    },
+    "NumberOfAssociations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NumberOfAssociations"
+        },
+        {
+          "description": "The number of firewall policies that use this rule group."
+        }
+      ]
+    },
+    "EncryptionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EncryptionConfiguration"
+        },
+        {
+          "description": "A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule group."
+        }
+      ]
+    },
+    "SourceMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceMetadata"
+        },
+        {
+          "description": "A complex type that contains metadata about the rule group that your own rule group is copied from. You can use the metadata to track the version updates made to the originating rule group."
+        }
+      ]
+    },
+    "SnsTopic": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule group is modified, such as for new versions and for version expiration. For more information, see the <a href=\"https://docs.aws.amazon.com/sns/latest/dg/welcome.html\">Amazon Simple Notification Service Developer Guide.</a>."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdateTime"
+        },
+        {
+          "description": "The last time that the rule group was changed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "RuleGroupArn",
+    "RuleGroupName",
+    "RuleGroupId"
+  ]
+}

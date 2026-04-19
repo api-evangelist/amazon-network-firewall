@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-delete-rule-group-response-schema.json",
+  "title": "DeleteRuleGroupResponse",
+  "description": "DeleteRuleGroupResponse schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "RuleGroupResponse": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleGroupResponse"
+        },
+        {
+          "description": "The high-level properties of a rule group. This, along with the <a>RuleGroup</a>, define the rule group. You can retrieve all objects for a rule group by calling <a>DescribeRuleGroup</a>. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "RuleGroupResponse"
+  ]
+}

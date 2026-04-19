@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-describe-resource-policy-response-structure.json",
+  "name": "DescribeResourcePolicyResponse",
+  "description": "DescribeResourcePolicyResponse schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "Policy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyString"
+        },
+        {
+          "description": "The IAM policy for the resource. "
+        }
+      ]
+    }
+  }
+}

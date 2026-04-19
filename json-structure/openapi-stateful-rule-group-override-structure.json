@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-stateful-rule-group-override-structure.json",
+  "name": "StatefulRuleGroupOverride",
+  "description": "The setting that allows the policy owner to change the behavior of the rule group within a policy. ",
+  "type": "object",
+  "properties": {
+    "Action": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OverrideAction"
+        },
+        {
+          "description": "The action that changes the rule group from <code>DROP</code> to <code>ALERT</code>. This only applies to managed rule groups."
+        }
+      ]
+    }
+  }
+}

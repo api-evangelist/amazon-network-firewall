@@ -1,0 +1,12 @@
+{
+  "UpdateToken": "example-string",
+  "RuleGroupArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "RuleGroupName": "my-resource",
+  "RuleGroup": "example-string",
+  "Rules": "example-string",
+  "Type": "standard",
+  "Description": "example-string",
+  "DryRun": "example-string",
+  "EncryptionConfiguration": "example-string",
+  "SourceMetadata": "example-string"
+}

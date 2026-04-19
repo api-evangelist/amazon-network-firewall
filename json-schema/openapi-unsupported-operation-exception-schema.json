@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-unsupported-operation-exception-schema.json",
+  "title": "UnsupportedOperationException",
+  "description": "UnsupportedOperationException schema from Amazon Network Firewall"
+}

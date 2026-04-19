@@ -1,0 +1,14 @@
+{
+  "FirewallName": "my-resource",
+  "FirewallArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "FirewallPolicyArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "VpcId": "resource-abc123",
+  "SubnetMappings": "example-string",
+  "DeleteProtection": "example-string",
+  "SubnetChangeProtection": "example-string",
+  "FirewallPolicyChangeProtection": "example-string",
+  "Description": "example-string",
+  "FirewallId": "resource-abc123",
+  "Tags": "example-string",
+  "EncryptionConfiguration": "example-string"
+}

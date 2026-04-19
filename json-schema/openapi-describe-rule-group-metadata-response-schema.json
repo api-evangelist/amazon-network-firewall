@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-describe-rule-group-metadata-response-schema.json",
+  "title": "DescribeRuleGroupMetadataResponse",
+  "description": "DescribeRuleGroupMetadataResponse schema from Amazon Network Firewall",
+  "type": "object",
+  "properties": {
+    "RuleGroupArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "<p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p> <p>You must specify the ARN or the name, and you can specify both. </p>"
+        }
+      ]
+    },
+    "RuleGroupName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "<p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p> <p>You must specify the ARN or the name, and you can specify both. </p>"
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "Returns the metadata objects for the specified rule group. "
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleGroupType"
+        },
+        {
+          "description": "<p>Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless rules. If it is stateful, it contains stateful rules. </p> <note> <p>This setting is required for requests that do not include the <code>RuleGroupARN</code>.</p> </note>"
+        }
+      ]
+    },
+    "Capacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuleCapacity"
+        },
+        {
+          "description": "<p>The maximum operating resources that this rule group can use. Rule group capacity is fixed at creation. When you update a rule group, you are limited to this capacity. When you reference a rule group from a firewall policy, Network Firewall reserves this capacity for the rule group. </p> <p>You can retrieve the capacity that would be required for a rule group before you create the rule group by calling <a>CreateRuleGroup</a> with <code>DryRun</code> set to <code>TRUE</code>. </p>"
+        }
+      ]
+    },
+    "StatefulRuleOptions": {
+      "$ref": "#/components/schemas/StatefulRuleOptions"
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdateTime"
+        },
+        {
+          "description": "The last time that the rule group was changed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "RuleGroupArn",
+    "RuleGroupName"
+  ]
+}

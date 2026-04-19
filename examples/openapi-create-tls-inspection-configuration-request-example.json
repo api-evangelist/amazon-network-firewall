@@ -1,0 +1,7 @@
+{
+  "TLSInspectionConfigurationName": "my-resource",
+  "TLSInspectionConfiguration": "example-string",
+  "Description": "example-string",
+  "Tags": "example-string",
+  "EncryptionConfiguration": "example-ref"
+}

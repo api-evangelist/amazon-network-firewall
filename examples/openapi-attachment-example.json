@@ -1,0 +1,6 @@
+{
+  "SubnetId": "resource-abc123",
+  "EndpointId": "resource-abc123",
+  "Status": "active",
+  "StatusMessage": "active"
+}

@@ -1,0 +1,41 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Network Firewall
+  description: Unified vocabulary for Amazon Network Firewall APIs.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: AWS Network Firewall
+    namespace: openapi.yml
+    version: 2020-11-12
+    baseUrl: http://network-firewall.{region}.amazonaws.com
+    status: active
+  actions:
+  - name: create
+    method: POST
+    pattern: write
+capability:
+  workflows:
+  - name: Amazon Network Firewall API Workflow
+    file: capabilities/amazon-network-firewall-workflow.yaml
+    description: Core API workflow
+    apis:
+    - openapi.yml
+    personas:
+    - Developer
+  personas:
+  - id: developer
+    name: Developer
+    description: Developer using Amazon Network Firewall APIs
+  domains:
+  - Amazon Network Firewall
+  - AWS
+crossReference:
+- resource: AWS Network Firewall
+  apis:
+  - openapi.yml
+  workflows:
+  - Amazon Network Firewall API Workflow
+  personas:
+  - Developer

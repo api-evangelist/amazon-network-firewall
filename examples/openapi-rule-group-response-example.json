@@ -1,0 +1,16 @@
+{
+  "RuleGroupArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "RuleGroupName": "my-resource",
+  "RuleGroupId": "resource-abc123",
+  "Description": "example-string",
+  "Type": "standard",
+  "Capacity": "example-string",
+  "RuleGroupStatus": "active",
+  "Tags": "example-string",
+  "ConsumedCapacity": "example-string",
+  "NumberOfAssociations": "example-string",
+  "EncryptionConfiguration": "example-string",
+  "SourceMetadata": "example-string",
+  "SnsTopic": "example-string",
+  "LastModifiedTime": "example-string"
+}

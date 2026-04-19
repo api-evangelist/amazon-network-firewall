@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-rule-option-structure.json",
+  "name": "RuleOption",
+  "description": "Additional settings for a stateful rule. This is part of the <a>StatefulRule</a> configuration.",
+  "type": "object",
+  "properties": {
+    "Keyword": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Keyword"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    },
+    "Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Settings"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "Keyword"
+  ]
+}

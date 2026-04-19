@@ -1,0 +1,380 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: AWS Network Firewall
+  description: <p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> 
+    <li> <p>The REST
+  tags:
+  - Amazon Network Firewall
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_SIGV4_AUTH: AWS_SIGV4_AUTH
+capability:
+  consumes:
+  - type: http
+    namespace: openapi.yml
+    baseUri: http://network-firewall.{region}.amazonaws.com
+    description: <p>This is the API Reference for Network Firewall. This guide is for developers who need detailed in
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_SIGV4_AUTH}}'
+      placement: header
+    resources:
+    - name: default
+      path: /default
+      description: Default operations for AWS Network Firewall
+      operations:
+      - name: AssociateFirewallPolicy
+        method: POST
+        description: AssociateFirewallPolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: AssociateSubnets
+        method: POST
+        description: AssociateSubnets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: CreateFirewall
+        method: POST
+        description: CreateFirewall
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: CreateFirewallPolicy
+        method: POST
+        description: CreateFirewallPolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: CreateRuleGroup
+        method: POST
+        description: CreateRuleGroup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: CreateTLSInspectionConfiguration
+        method: POST
+        description: CreateTLSInspectionConfiguration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DeleteFirewall
+        method: POST
+        description: DeleteFirewall
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DeleteFirewallPolicy
+        method: POST
+        description: DeleteFirewallPolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DeleteResourcePolicy
+        method: POST
+        description: DeleteResourcePolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DeleteRuleGroup
+        method: POST
+        description: DeleteRuleGroup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DeleteTLSInspectionConfiguration
+        method: POST
+        description: DeleteTLSInspectionConfiguration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeFirewall
+        method: POST
+        description: DescribeFirewall
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeFirewallPolicy
+        method: POST
+        description: DescribeFirewallPolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeLoggingConfiguration
+        method: POST
+        description: DescribeLoggingConfiguration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeResourcePolicy
+        method: POST
+        description: DescribeResourcePolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeRuleGroup
+        method: POST
+        description: DescribeRuleGroup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeRuleGroupMetadata
+        method: POST
+        description: DescribeRuleGroupMetadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DescribeTLSInspectionConfiguration
+        method: POST
+        description: DescribeTLSInspectionConfiguration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: DisassociateSubnets
+        method: POST
+        description: DisassociateSubnets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}
+      - name: ListFirewallPolicies
+        method: POST
+        description: ListFirewallPolicies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          required: false
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          required: false
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+          description: X-Amz-Target
+        body:
+          type: json
+          data: {}

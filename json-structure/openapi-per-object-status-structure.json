@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-per-object-status-structure.json",
+  "name": "PerObjectStatus",
+  "description": "Provides configuration status for a single policy or rule group that is used for a firewall endpoint. Network Firewall provides each endpoint with the rules that are configured in the firewall policy. Each time you add a subnet or modify the associated firewall policy, Network Firewall synchronizes the rules in the endpoint, so it can properly filter network traffic. This is part of a <a>SyncState</a> for a firewall.",
+  "type": "object",
+  "properties": {
+    "SyncStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PerObjectSyncStatus"
+        },
+        {
+          "description": "Indicates whether this object is in sync with the version indicated in the update token."
+        }
+      ]
+    },
+    "UpdateToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UpdateToken"
+        },
+        {
+          "description": "The current version of the object that is either in sync or pending synchronization. "
+        }
+      ]
+    }
+  }
+}

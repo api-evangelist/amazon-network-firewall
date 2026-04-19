@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-server-certificates-schema.json",
+  "title": "ServerCertificates",
+  "description": "ServerCertificates schema from Amazon Network Firewall",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ServerCertificate"
+  }
+}

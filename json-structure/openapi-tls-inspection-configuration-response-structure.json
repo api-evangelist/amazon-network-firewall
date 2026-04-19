@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-tls-inspection-configuration-response-structure.json",
+  "name": "TLSInspectionConfigurationResponse",
+  "description": "The high-level properties of a TLS inspection configuration. This, along with the <code>TLSInspectionConfiguration</code>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <code>DescribeTLSInspectionConfiguration</code>.",
+  "type": "object",
+  "properties": {
+    "TLSInspectionConfigurationArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the TLS inspection configuration."
+        }
+      ]
+    },
+    "TLSInspectionConfigurationName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceName"
+        },
+        {
+          "description": "The descriptive name of the TLS inspection configuration. You can't change the name of a TLS inspection configuration after you create it."
+        }
+      ]
+    },
+    "TLSInspectionConfigurationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceId"
+        },
+        {
+          "description": "A unique identifier for the TLS inspection configuration. This ID is returned in the responses to create and list commands. You provide it to operations such as update and delete."
+        }
+      ]
+    },
+    "TLSInspectionConfigurationStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceStatus"
+        },
+        {
+          "description": "Detailed information about the current status of a <a>TLSInspectionConfiguration</a>. You can retrieve this for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a> and providing the TLS inspection configuration name and ARN."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "A description of the TLS inspection configuration. "
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The key:value pairs to associate with the resource."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdateTime"
+        },
+        {
+          "description": "The last time that the TLS inspection configuration was changed."
+        }
+      ]
+    },
+    "NumberOfAssociations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NumberOfAssociations"
+        },
+        {
+          "description": "The number of firewall policies that use this TLS inspection configuration."
+        }
+      ]
+    },
+    "EncryptionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EncryptionConfiguration"
+        },
+        {
+          "description": "A complex type that contains the Amazon Web Services KMS encryption configuration settings for your TLS inspection configuration."
+        }
+      ]
+    },
+    "Certificates": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Certificates"
+        },
+        {
+          "description": "A list of the certificates associated with the TLS inspection configuration."
+        }
+      ]
+    }
+  },
+  "required": [
+    "TLSInspectionConfigurationArn",
+    "TLSInspectionConfigurationName",
+    "TLSInspectionConfigurationId"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-structure/openapi-boolean-structure.json",
+  "name": "Boolean",
+  "description": "Boolean schema from Amazon Network Firewall",
+  "type": "boolean"
+}

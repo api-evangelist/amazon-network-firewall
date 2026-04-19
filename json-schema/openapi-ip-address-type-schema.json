@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-ip-address-type-schema.json",
+  "title": "IPAddressType",
+  "description": "IPAddressType schema from Amazon Network Firewall",
+  "type": "string",
+  "enum": [
+    "DUALSTACK",
+    "IPV4",
+    "IPV6"
+  ]
+}

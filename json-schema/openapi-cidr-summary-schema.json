@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/json-schema/openapi-cidr-summary-schema.json",
+  "title": "CIDRSummary",
+  "description": "Summarizes the CIDR blocks used by the IP set references in a firewall. Network Firewall calculates the number of CIDRs by taking an aggregated count of all CIDRs used by the IP sets you are referencing.",
+  "type": "object",
+  "properties": {
+    "AvailableCIDRCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CIDRCount"
+        },
+        {
+          "description": "The number of CIDR blocks available for use by the IP set references in a firewall."
+        }
+      ]
+    },
+    "UtilizedCIDRCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CIDRCount"
+        },
+        {
+          "description": "The number of CIDR blocks used by the IP set references in a firewall."
+        }
+      ]
+    },
+    "IPSetReferences": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IPSetMetadataMap"
+        },
+        {
+          "description": "The list of the IP set references used by a firewall."
+        }
+      ]
+    }
+  }
+}
