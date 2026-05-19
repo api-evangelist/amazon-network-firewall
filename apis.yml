@@ -1,10 +1,8 @@
 aid: amazon-network-firewall
 name: Amazon Network Firewall
-description: >-
-  AWS Network Firewall is a stateful, managed, network firewall and intrusion
-  detection and prevention service for your virtual private cloud (VPC). It
-  enables you to filter traffic at the perimeter of your VPC with a flexible
-  rules engine with support for thousands of custom rules.
+description: AWS Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service
+  for your virtual private cloud (VPC). It enables you to filter traffic at the perimeter of your VPC with a flexible rules
+  engine with support for thousands of custom rules.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -13,18 +11,15 @@ tags:
 - Intrusion Detection
 - Network Security
 - VPC
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-network-firewall:aws-network-firewall-api
   name: AWS Network Firewall API
-  description: >-
-    The AWS Network Firewall API provides programmatic access to create and
-    manage firewalls, firewall policies, rule groups, and TLS inspection
-    configurations for network traffic filtering in VPCs.
+  description: The AWS Network Firewall API provides programmatic access to create and manage firewalls, firewall policies,
+    rule groups, and TLS inspection configurations for network traffic filtering in VPCs.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
   tags:
@@ -42,6 +37,8 @@ apis:
     url: https://aws.amazon.com/network-firewall/pricing/
   - type: FAQ
     url: https://aws.amazon.com/network-firewall/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-network-firewall.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/network-firewall/
@@ -73,8 +70,6 @@ common:
   url: rules/amazon-network-firewall-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/amazon-network-firewall-vocabulary.yaml
-- type: NaftikoCapability
-  url: capabilities/amazon-network-firewall-workflow.yaml
 - type: JSONLD
   url: json-ld/amazon-network-firewall-openapi-context.jsonld
 - type: JSONSchema
@@ -95,14 +90,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
