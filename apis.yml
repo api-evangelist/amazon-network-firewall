@@ -40,6 +40,14 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/network-firewall/faqs/
 common:
+  - type: TrustCenter
+    url: security/amazon-network-firewall-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-network-firewall-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-network-firewall-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-network-firewall-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/network-firewall/
   - type: Website
