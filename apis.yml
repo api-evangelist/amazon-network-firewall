@@ -40,6 +40,8 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/network-firewall/faqs/
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-network-firewall-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-network-firewall-trust-center.yml
   - type: VulnerabilityDisclosure
