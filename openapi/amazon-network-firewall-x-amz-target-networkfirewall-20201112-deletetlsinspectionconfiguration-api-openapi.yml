@@ -1,0 +1,437 @@
+openapi: 3.0.0
+info:
+  version: 2020-11-12
+  x-release: v4
+  title: 'AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration API'
+  description: '<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that''s tailored to the programming language or platform that you''re using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href="https://suricata.io/">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don''t already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that''s defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>'
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: network-firewall
+  x-aws-signingName: network-firewall
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/network-firewall-2020-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://network-firewall.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Network Firewall multi-region endpoint
+- url: https://network-firewall.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Network Firewall multi-region endpoint
+- url: http://network-firewall.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Network Firewall endpoint for China (Beijing) and China (Ningxia)
+- url: https://network-firewall.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Network Firewall endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration'
+paths:
+  /#X-Amz-Target=NetworkFirewall_20201112.DeleteTLSInspectionConfiguration:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DeleteTLSInspectionConfiguration
+      description: Deletes the specified <a>TLSInspectionConfiguration</a>.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteTLSInspectionConfigurationResponse'
+              examples:
+                DeleteTLSInspectionConfiguration200Example:
+                  summary: Default DeleteTLSInspectionConfiguration 200 response
+                  x-microcks-default: true
+                  value:
+                    TLSInspectionConfigurationResponse: example-string
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+        '482':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: InvalidOperationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidOperationException'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteTLSInspectionConfigurationRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - NetworkFirewall_20201112.DeleteTLSInspectionConfiguration
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      summary: Amazon Network Firewall Delete T L S Inspection Configuration
+      tags:
+      - '#X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration'
+components:
+  schemas:
+    ResourceNotFoundException: {}
+    TLSInspectionConfigurationResponse:
+      type: object
+      required:
+      - TLSInspectionConfigurationArn
+      - TLSInspectionConfigurationName
+      - TLSInspectionConfigurationId
+      properties:
+        TLSInspectionConfigurationArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: The Amazon Resource Name (ARN) of the TLS inspection configuration.
+        TLSInspectionConfigurationName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The descriptive name of the TLS inspection configuration. You can't change the name of a TLS inspection configuration after you create it.
+        TLSInspectionConfigurationId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: A unique identifier for the TLS inspection configuration. This ID is returned in the responses to create and list commands. You provide it to operations such as update and delete.
+        TLSInspectionConfigurationStatus:
+          allOf:
+          - $ref: '#/components/schemas/ResourceStatus'
+          - description: Detailed information about the current status of a <a>TLSInspectionConfiguration</a>. You can retrieve this for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a> and providing the TLS inspection configuration name and ARN.
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: 'A description of the TLS inspection configuration. '
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: The key:value pairs to associate with the resource.
+        LastModifiedTime:
+          allOf:
+          - $ref: '#/components/schemas/LastUpdateTime'
+          - description: The last time that the TLS inspection configuration was changed.
+        NumberOfAssociations:
+          allOf:
+          - $ref: '#/components/schemas/NumberOfAssociations'
+          - description: The number of firewall policies that use this TLS inspection configuration.
+        EncryptionConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionConfiguration'
+          - description: A complex type that contains the Amazon Web Services KMS encryption configuration settings for your TLS inspection configuration.
+        Certificates:
+          allOf:
+          - $ref: '#/components/schemas/Certificates'
+          - description: A list of the certificates associated with the TLS inspection configuration.
+      description: The high-level properties of a TLS inspection configuration. This, along with the <code>TLSInspectionConfiguration</code>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <code>DescribeTLSInspectionConfiguration</code>.
+    TagKey:
+      type: string
+      pattern: ^.*$
+      minLength: 1
+      maxLength: 128
+    ThrottlingException: {}
+    ResourceStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - DELETING
+    Certificates:
+      type: array
+      items:
+        $ref: '#/components/schemas/TlsCertificateData'
+    Description:
+      type: string
+      pattern: ^.*$
+      maxLength: 512
+    StatusReason:
+      type: string
+      pattern: ^[a-zA-Z0-9- ]+$
+      minLength: 1
+      maxLength: 256
+    InvalidRequestException: {}
+    ResourceId:
+      type: string
+      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
+      minLength: 36
+      maxLength: 36
+    CollectionMember_String:
+      type: string
+    InvalidOperationException: {}
+    LastUpdateTime:
+      type: string
+      format: date-time
+    InternalServerError: {}
+    EncryptionConfiguration:
+      type: object
+      required:
+      - Type
+      properties:
+        KeyId:
+          allOf:
+          - $ref: '#/components/schemas/KeyId'
+          - description: The ID of the Amazon Web Services Key Management Service (KMS) customer managed key. You can use any of the key identifiers that KMS supports, unless you're using a key that's managed by another account. If you're using a key managed by another account, then specify the key ARN. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key ID</a> in the <i>Amazon Web Services KMS Developer Guide</i>.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionType'
+          - description: The type of Amazon Web Services KMS key to use for encryption of your Network Firewall resources.
+      description: A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.
+    KeyId:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 2048
+    EncryptionType:
+      type: string
+      enum:
+      - CUSTOMER_KMS
+      - AWS_OWNED_KMS_KEY
+    ResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9-]+$
+      minLength: 1
+      maxLength: 128
+    ResourceArn:
+      type: string
+      pattern: ^arn:aws.*
+      minLength: 1
+      maxLength: 256
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.
+      description: 'A key:value pair associated with an Amazon Web Services resource. The key:value pair can be anything you define. Typically, the tag key represents a category (such as "environment") and the tag value represents a specific value within that category (such as "test," "development," or "production"). You can add up to 50 tags to each Amazon Web Services resource. '
+    NumberOfAssociations:
+      type: integer
+    DeleteTLSInspectionConfigurationResponse:
+      type: object
+      required:
+      - TLSInspectionConfigurationResponse
+      properties:
+        TLSInspectionConfigurationResponse:
+          allOf:
+          - $ref: '#/components/schemas/TLSInspectionConfigurationResponse'
+          - description: 'The high-level properties of a TLS inspection configuration. This, along with the <a>TLSInspectionConfiguration</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. '
+    TagValue:
+      type: string
+      pattern: ^.*$
+      minLength: 0
+      maxLength: 256
+    DeleteTLSInspectionConfigurationRequest:
+      type: object
+      title: DeleteTLSInspectionConfigurationRequest
+      properties:
+        TLSInspectionConfigurationArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: <p>The Amazon Resource Name (ARN) of the TLS inspection configuration.</p> <p>You must specify the ARN or the name, and you can specify both. </p>
+        TLSInspectionConfigurationName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: <p>The descriptive name of the TLS inspection configuration. You can't change the name of a TLS inspection configuration after you create it.</p> <p>You must specify the ARN or the name, and you can specify both. </p>
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+      maxItems: 200
+    TlsCertificateData:
+      type: object
+      properties:
+        CertificateArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: The Amazon Resource Name (ARN) of the certificate.
+        CertificateSerial:
+          allOf:
+          - $ref: '#/components/schemas/CollectionMember_String'
+          - description: The serial number of the certificate.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/CollectionMember_String'
+          - description: The status of the certificate.
+        StatusMessage:
+          allOf:
+          - $ref: '#/components/schemas/StatusReason'
+          - description: Contains details about the certificate status, including information about certificate errors.
+      description: Contains metadata about an Certificate Manager certificate.
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/network-firewall/
+x-hasEquivalentPaths: true

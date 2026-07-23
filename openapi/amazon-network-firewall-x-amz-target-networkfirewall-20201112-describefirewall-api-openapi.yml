@@ -1,0 +1,593 @@
+openapi: 3.0.0
+info:
+  version: 2020-11-12
+  x-release: v4
+  title: 'AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.DescribeFirewall API'
+  description: '<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that''s tailored to the programming language or platform that you''re using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href="https://suricata.io/">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don''t already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that''s defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>'
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: network-firewall
+  x-aws-signingName: network-firewall
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/network-firewall-2020-11-12.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://network-firewall.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Network Firewall multi-region endpoint
+- url: https://network-firewall.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Network Firewall multi-region endpoint
+- url: http://network-firewall.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Network Firewall endpoint for China (Beijing) and China (Ningxia)
+- url: https://network-firewall.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Network Firewall endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=NetworkFirewall 20201112.DescribeFirewall'
+paths:
+  /#X-Amz-Target=NetworkFirewall_20201112.DescribeFirewall:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeFirewall
+      description: 'Returns the data objects for the specified firewall. '
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeFirewallResponse'
+              examples:
+                DescribeFirewall200Example:
+                  summary: Default DescribeFirewall 200 response
+                  x-microcks-default: true
+                  value:
+                    UpdateToken: example-string
+                    Firewall: example-string
+                    FirewallStatus: active
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+        '481':
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+        '482':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeFirewallRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - NetworkFirewall_20201112.DescribeFirewall
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      summary: Amazon Network Firewall Describe Firewall
+      tags:
+      - '#X Amz Target=NetworkFirewall 20201112.DescribeFirewall'
+components:
+  schemas:
+    SyncStateConfig:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/PerObjectStatus'
+    ResourceNotFoundException: {}
+    DescribeFirewallResponse:
+      type: object
+      properties:
+        UpdateToken:
+          allOf:
+          - $ref: '#/components/schemas/UpdateToken'
+          - description: <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p> <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p> <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+        Firewall:
+          allOf:
+          - $ref: '#/components/schemas/Firewall'
+          - description: 'The configuration settings for the firewall. These settings include the firewall policy and the subnets in your VPC to use for the firewall endpoints. '
+        FirewallStatus:
+          allOf:
+          - $ref: '#/components/schemas/FirewallStatus'
+          - description: Detailed information about the current status of a <a>Firewall</a>. You can retrieve this for a firewall by calling <a>DescribeFirewall</a> and providing the firewall name and ARN.
+    EndpointId:
+      type: string
+    TagKey:
+      type: string
+      pattern: ^.*$
+      minLength: 1
+      maxLength: 128
+    ThrottlingException: {}
+    DescribeFirewallRequest:
+      type: object
+      title: DescribeFirewallRequest
+      properties:
+        FirewallName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p> <p>You must specify the ARN or the name, and you can specify both. </p>
+        FirewallArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: <p>The Amazon Resource Name (ARN) of the firewall.</p> <p>You must specify the ARN or the name, and you can specify both. </p>
+    Description:
+      type: string
+      pattern: ^.*$
+      maxLength: 512
+    Firewall:
+      type: object
+      required:
+      - FirewallPolicyArn
+      - VpcId
+      - SubnetMappings
+      - FirewallId
+      properties:
+        FirewallName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The descriptive name of the firewall. You can't change the name of a firewall after you create it.
+        FirewallArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: The Amazon Resource Name (ARN) of the firewall.
+        FirewallPolicyArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: <p>The Amazon Resource Name (ARN) of the firewall policy.</p> <p>The relationship of firewall to firewall policy is many to one. Each firewall requires one firewall policy association, and you can use the same firewall policy for multiple firewalls. </p>
+        VpcId:
+          allOf:
+          - $ref: '#/components/schemas/VpcId'
+          - description: 'The unique identifier of the VPC where the firewall is in use. '
+        SubnetMappings:
+          allOf:
+          - $ref: '#/components/schemas/SubnetMappings'
+          - description: 'The public subnets that Network Firewall is using for the firewall. Each subnet must belong to a different Availability Zone. '
+        DeleteProtection:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A flag indicating whether it is possible to delete the firewall. A setting of <code>TRUE</code> indicates that the firewall is protected against deletion. Use this setting to protect against accidentally deleting a firewall that is in use. When you create a firewall, the operation initializes this flag to <code>TRUE</code>.
+        SubnetChangeProtection:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A setting indicating whether the firewall is protected against changes to the subnet associations. Use this setting to protect against accidentally modifying the subnet associations for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>.
+        FirewallPolicyChangeProtection:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A setting indicating whether the firewall is protected against a change to the firewall policy association. Use this setting to protect against accidentally modifying the firewall policy for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>.
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: A description of the firewall.
+        FirewallId:
+          allOf:
+          - $ref: '#/components/schemas/ResourceId'
+          - description: 'The unique identifier for the firewall. '
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: <p/>
+        EncryptionConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionConfiguration'
+          - description: A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall.
+      description: <p>The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall Amazon Web Services resource. </p> <p>The status of the firewall, for example whether it's ready to filter network traffic, is provided in the corresponding <a>FirewallStatus</a>. You can retrieve both objects by calling <a>DescribeFirewall</a>.</p>
+    CapacityUsageSummary:
+      type: object
+      properties:
+        CIDRs:
+          allOf:
+          - $ref: '#/components/schemas/CIDRSummary'
+          - description: Describes the capacity usage of the CIDR blocks used by the IP set references in a firewall.
+      description: The capacity usage summary of the resources used by the <a>ReferenceSets</a> in a firewall.
+    InvalidRequestException: {}
+    CIDRSummary:
+      type: object
+      properties:
+        AvailableCIDRCount:
+          allOf:
+          - $ref: '#/components/schemas/CIDRCount'
+          - description: The number of CIDR blocks available for use by the IP set references in a firewall.
+        UtilizedCIDRCount:
+          allOf:
+          - $ref: '#/components/schemas/CIDRCount'
+          - description: The number of CIDR blocks used by the IP set references in a firewall.
+        IPSetReferences:
+          allOf:
+          - $ref: '#/components/schemas/IPSetMetadataMap'
+          - description: The list of the IP set references used by a firewall.
+      description: Summarizes the CIDR blocks used by the IP set references in a firewall. Network Firewall calculates the number of CIDRs by taking an aggregated count of all CIDRs used by the IP sets you are referencing.
+    CollectionMember_String:
+      type: string
+    ResourceId:
+      type: string
+      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
+      minLength: 36
+      maxLength: 36
+    InternalServerError: {}
+    EncryptionConfiguration:
+      type: object
+      required:
+      - Type
+      properties:
+        KeyId:
+          allOf:
+          - $ref: '#/components/schemas/KeyId'
+          - description: The ID of the Amazon Web Services Key Management Service (KMS) customer managed key. You can use any of the key identifiers that KMS supports, unless you're using a key that's managed by another account. If you're using a key managed by another account, then specify the key ARN. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key ID</a> in the <i>Amazon Web Services KMS Developer Guide</i>.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionType'
+          - description: The type of Amazon Web Services KMS key to use for encryption of your Network Firewall resources.
+      description: A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.
+    Boolean:
+      type: boolean
+    StatusMessage:
+      type: string
+    KeyId:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 2048
+    EncryptionType:
+      type: string
+      enum:
+      - CUSTOMER_KMS
+      - AWS_OWNED_KMS_KEY
+    AttachmentStatus:
+      type: string
+      enum:
+      - CREATING
+      - DELETING
+      - SCALING
+      - READY
+    UpdateToken:
+      type: string
+      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
+      minLength: 1
+      maxLength: 1024
+    IPAddressType:
+      type: string
+      enum:
+      - DUALSTACK
+      - IPV4
+      - IPV6
+    ResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9-]+$
+      minLength: 1
+      maxLength: 128
+    IPSetMetadataMap:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/IPSetMetadata'
+    ResourceArn:
+      type: string
+      pattern: ^arn:aws.*
+      minLength: 1
+      maxLength: 256
+    PerObjectSyncStatus:
+      type: string
+      enum:
+      - PENDING
+      - IN_SYNC
+      - CAPACITY_CONSTRAINED
+    Attachment:
+      type: object
+      properties:
+        SubnetId:
+          allOf:
+          - $ref: '#/components/schemas/AzSubnet'
+          - description: 'The unique identifier of the subnet that you''ve specified to be used for a firewall endpoint. '
+        EndpointId:
+          allOf:
+          - $ref: '#/components/schemas/EndpointId'
+          - description: 'The identifier of the firewall endpoint that Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint. '
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/AttachmentStatus'
+          - description: The current status of the firewall endpoint in the subnet. This value reflects both the instantiation of the endpoint in the VPC subnet and the sync states that are reported in the <code>Config</code> settings. When this value is <code>READY</code>, the endpoint is available and configured properly to handle network traffic. When the endpoint isn't available for traffic, this value will reflect its state, for example <code>CREATING</code> or <code>DELETING</code>.
+        StatusMessage:
+          allOf:
+          - $ref: '#/components/schemas/StatusMessage'
+          - description: If Network Firewall fails to create or delete the firewall endpoint in the subnet, it populates this with the reason for the failure and how to resolve it. Depending on the error, it can take as many as 15 minutes to populate this field. For more information about the errors and solutions available for this field, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/firewall-troubleshooting-endpoint-failures.html">Troubleshooting firewall endpoint failures</a> in the <i>Network Firewall Developer Guide</i>.
+      description: The configuration and status for a single subnet that you've specified for use by the Network Firewall firewall. This is part of the <a>FirewallStatus</a>.
+    CIDRCount:
+      type: integer
+      minimum: 0
+      maximum: 1000000
+    SubnetMappings:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetMapping'
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.
+      description: 'A key:value pair associated with an Amazon Web Services resource. The key:value pair can be anything you define. Typically, the tag key represents a category (such as "environment") and the tag value represents a specific value within that category (such as "test," "development," or "production"). You can add up to 50 tags to each Amazon Web Services resource. '
+    IPSetMetadata:
+      type: object
+      properties:
+        ResolvedCIDRCount:
+          allOf:
+          - $ref: '#/components/schemas/CIDRCount'
+          - description: Describes the total number of CIDR blocks currently in use by the IP set references in a firewall. To determine how many CIDR blocks are available for you to use in a firewall, you can call <code>AvailableCIDRCount</code>.
+      description: General information about the IP set.
+    TagValue:
+      type: string
+      pattern: ^.*$
+      minLength: 0
+      maxLength: 256
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+      maxItems: 200
+    SyncStates:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/SyncState'
+    ConfigurationSyncState:
+      type: string
+      enum:
+      - PENDING
+      - IN_SYNC
+      - CAPACITY_CONSTRAINED
+    SubnetMapping:
+      type: object
+      required:
+      - SubnetId
+      properties:
+        SubnetId:
+          allOf:
+          - $ref: '#/components/schemas/CollectionMember_String'
+          - description: 'The unique identifier for the subnet. '
+        IPAddressType:
+          allOf:
+          - $ref: '#/components/schemas/IPAddressType'
+          - description: The subnet's IP address type. You can't change the IP address type after you create the subnet.
+      description: The ID for a subnet that you want to associate with the firewall. This is used with <a>CreateFirewall</a> and <a>AssociateSubnets</a>. Network Firewall creates an instance of the associated firewall in each subnet that you specify, to filter traffic in the subnet's Availability Zone.
+    FirewallStatus:
+      type: object
+      required:
+      - Status
+      - ConfigurationSyncStateSummary
+      properties:
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/FirewallStatusValue'
+          - description: 'The readiness of the configured firewall to handle network traffic across all of the Availability Zones where you''ve configured it. This setting is <code>READY</code> only when the <code>ConfigurationSyncStateSummary</code> value is <code>IN_SYNC</code> and the <code>Attachment</code> <code>Status</code> values for all of the configured subnets are <code>READY</code>. '
+        ConfigurationSyncStateSummary:
+          allOf:
+          - $ref: '#/components/schemas/ConfigurationSyncState'
+          - description: <p>The configuration sync state for the firewall. This summarizes the sync states reported in the <code>Config</code> settings for all of the Availability Zones where you have configured the firewall. </p> <p>When you create a firewall or update its configuration, for example by adding a rule group to its firewall policy, Network Firewall distributes the configuration changes to all zones where the firewall is in use. This summary indicates whether the configuration changes have been applied everywhere. </p> <p>This status must be <code>IN_SYNC</code> for the firewall to be ready for use, but it doesn't indicate that the firewall is ready. The <code>Status</code> setting indicates firewall readiness.</p>
+        SyncStates:
+          allOf:
+          - $ref: '#/components/schemas/SyncStates'
+          - description: 'The subnets that you''ve configured for use by the Network Firewall firewall. This contains one array element per Availability Zone where you''ve configured a subnet. These objects provide details of the information that is summarized in the <code>ConfigurationSyncStateSummary</code> and <code>Status</code>, broken down by zone and configuration object. '
+        CapacityUsageSummary:
+          allOf:
+          - $ref: '#/components/schemas/CapacityUsageSummary'
+          - description: Describes the capacity usage of the resources contained in a firewall's reference sets. Network Firewall calclulates the capacity usage by taking an aggregated count of all of the resources used by all of the reference sets in a firewall.
+      description: Detailed information about the current status of a <a>Firewall</a>. You can retrieve this for a firewall by calling <a>DescribeFirewall</a> and providing the firewall name and ARN.
+    SyncState:
+      type: object
+      properties:
+        Attachment:
+          allOf:
+          - $ref: '#/components/schemas/Attachment'
+          - description: The attachment status of the firewall's association with a single VPC subnet. For each configured subnet, Network Firewall creates the attachment by instantiating the firewall endpoint in the subnet so that it's ready to take traffic. This is part of the <a>FirewallStatus</a>.
+        Config:
+          allOf:
+          - $ref: '#/components/schemas/SyncStateConfig'
+          - description: The configuration status of the firewall endpoint in a single VPC subnet. Network Firewall provides each endpoint with the rules that are configured in the firewall policy. Each time you add a subnet or modify the associated firewall policy, Network Firewall synchronizes the rules in the endpoint, so it can properly filter network traffic. This is part of the <a>FirewallStatus</a>.
+      description: '<p>The status of the firewall endpoint and firewall policy configuration for a single VPC subnet. </p> <p>For each VPC subnet that you associate with a firewall, Network Firewall does the following: </p> <ul> <li> <p>Instantiates a firewall endpoint in the subnet, ready to take traffic.</p> </li> <li> <p>Configures the endpoint with the current firewall policy settings, to provide the filtering behavior for the endpoint.</p> </li> </ul> <p>When you update a firewall, for example to add a subnet association or change a rule group in the firewall policy, the affected sync states reflect out-of-sync or not ready status until the changes are complete. </p>'
+    VpcId:
+      type: string
+      pattern: ^vpc-[0-9a-f]+$
+      minLength: 1
+      maxLength: 128
+    AzSubnet:
+      type: string
+      pattern: ^subnet-[0-9a-f]+$
+      minLength: 1
+      maxLength: 128
+    FirewallStatusValue:
+      type: string
+      enum:
+      - PROVISIONING
+      - DELETING
+      - READY
+    PerObjectStatus:
+      type: object
+      properties:
+        SyncStatus:
+          allOf:
+          - $ref: '#/components/schemas/PerObjectSyncStatus'
+          - description: Indicates whether this object is in sync with the version indicated in the update token.
+        UpdateToken:
+          allOf:
+          - $ref: '#/components/schemas/UpdateToken'
+          - description: 'The current version of the object that is either in sync or pending synchronization. '
+      description: Provides configuration status for a single policy or rule group that is used for a firewall endpoint. Network Firewall provides each endpoint with the rules that are configured in the firewall policy. Each time you add a subnet or modify the associated firewall policy, Network Firewall synchronizes the rules in the endpoint, so it can properly filter network traffic. This is part of a <a>SyncState</a> for a firewall.
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/network-firewall/
+x-hasEquivalentPaths: true
