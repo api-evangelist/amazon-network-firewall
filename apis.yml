@@ -5,7 +5,20 @@ description: >-
   virtual private cloud (VPC). It enables you to filter traffic at the perimeter of your VPC with a flexible rules
   engine with support for thousands of custom rules.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-network-firewall.png
 tags:
   - AWS
   - Firewall
@@ -17,29 +30,820 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: amazon-network-firewall:aws-network-firewall-api
-    name: AWS Network Firewall API
-    description: >-
-      The AWS Network Firewall API provides programmatic access to create and manage firewalls, firewall policies, rule
-      groups, and TLS inspection configurations for network traffic filtering in VPCs.
-    humanURL: https://aws.amazon.com/network-firewall/
-    baseURL: https://network-firewall.amazonaws.com
-    tags:
-      - Firewall
-      - Network Security
-      - VPC
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
-      - type: OpenAPI
-        url: openapi/amazon-network-firewall-openapi.yml
-      - type: GettingStarted
-        url: https://aws.amazon.com/network-firewall/getting-started/
-      - type: Pricing
-        url: https://aws.amazon.com/network-firewall/pricing/
-      - type: FAQ
-        url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.associatefirewallpolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateSubnets API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.AssociateSubnets API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.associatesubnets.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.AssociateSubnets'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.CreateFirewall API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.CreateFirewall API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.createfirewall.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.CreateFirewall'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.CreateFirewallPolicy API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.CreateFirewallPolicy API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.createfirewallpolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.CreateFirewallPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.CreateRuleGroup API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.CreateRuleGroup API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.createrulegroup.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.CreateRuleGroup'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.CreateTLSInspectionConfiguration API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.CreateTLSInspectionConfiguration API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.createtlsinspectionconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.CreateTLSInspectionConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DeleteFirewall API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DeleteFirewall API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.deletefirewall.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DeleteFirewall'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DeleteFirewallPolicy API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DeleteFirewallPolicy API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.deletefirewallpolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DeleteFirewallPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DeleteResourcePolicy API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DeleteResourcePolicy API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.deleteresourcepolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DeleteResourcePolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DeleteRuleGroup API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DeleteRuleGroup API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.deleterulegroup.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DeleteRuleGroup'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.deletetlsinspectionconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeFirewall API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeFirewall API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.describefirewall.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeFirewall'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeFirewallPolicy API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeFirewallPolicy API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.describefirewallpolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeFirewallPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeLoggingConfiguration API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeLoggingConfiguration API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.describeloggingconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeLoggingConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeResourcePolicy API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeResourcePolicy API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.describeresourcepolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeResourcePolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeRuleGroup API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeRuleGroup API from Amazon Network Firewall — 1
+    operation(s) for #x amz target=networkfirewall 20201112.describerulegroup.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeRuleGroup'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeRuleGroupMetadata API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeRuleGroupMetadata API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.describerulegroupmetadata.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeRuleGroupMetadata'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DescribeTLSInspectionConfiguration
+    API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DescribeTLSInspectionConfiguration API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.describetlsinspectionconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DescribeTLSInspectionConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.DisassociateSubnets API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.DisassociateSubnets API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.disassociatesubnets.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.DisassociateSubnets'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.ListFirewallPolicies API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.ListFirewallPolicies API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.listfirewallpolicies.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.ListFirewallPolicies'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.ListFirewalls API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.ListFirewalls API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.listfirewalls.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.ListFirewalls'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.ListRuleGroups API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.ListRuleGroups API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.listrulegroups.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.ListRuleGroups'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.ListTagsForResource API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.ListTagsForResource API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.listtagsforresource.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.ListTagsForResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.ListTLSInspectionConfigurations API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.ListTLSInspectionConfigurations API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.listtlsinspectionconfigurations.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.ListTLSInspectionConfigurations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.PutResourcePolicy API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.PutResourcePolicy API from Amazon Network Firewall — 1
+    operation(s) for #x amz target=networkfirewall 20201112.putresourcepolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.PutResourcePolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.TagResource API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.TagResource API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.tagresource.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.TagResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UntagResource API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UntagResource API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.untagresource.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UntagResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateFirewallDeleteProtection API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateFirewallDeleteProtection API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewalldeleteprotection.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallDeleteProtection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateFirewallDescription API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateFirewallDescription API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewalldescription.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallDescription'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateFirewallEncryptionConfiguration
+    API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateFirewallEncryptionConfiguration API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewallencryptionconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallEncryptionConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicy API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicy API from Amazon Network Firewall —
+    1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewallpolicy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicyChangeProtection
+    API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicyChangeProtection API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewallpolicychangeprotection.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicyChangeProtection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateLoggingConfiguration API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateLoggingConfiguration API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.updateloggingconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateLoggingConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api
+  name: 'Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateRuleGroup API'
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateRuleGroup API from Amazon Network Firewall — 1 operation(s)
+    for #x amz target=networkfirewall 20201112.updaterulegroup.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateRuleGroup'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateSubnetChangeProtection API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateSubnetChangeProtection API from Amazon Network Firewall
+    — 1 operation(s) for #x amz target=networkfirewall 20201112.updatesubnetchangeprotection.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateSubnetChangeProtection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api
+  name: >-
+    Amazon Network Firewall #X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration API
+  description: >-
+    The #X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration API from Amazon Network
+    Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatetlsinspectionconfiguration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - '#X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-network-firewall/overview
   - type: AgenticAccess
     url: agentic-access/amazon-network-firewall-agentic-access.yml
   - type: TrustCenter
