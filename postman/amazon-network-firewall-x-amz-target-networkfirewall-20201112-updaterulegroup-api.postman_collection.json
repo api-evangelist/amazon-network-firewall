@@ -1,0 +1,662 @@
+{
+  "info": {
+    "_postman_id": "150346ad-6e0a-49d0-9997-26fe2361f915",
+    "name": "AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.UpdateRuleGroup API",
+    "description": "<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-apis.html\">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see <a href=\"http://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href=\"https://docs.aws.amazon.com/network-firewall/latest/developerguide/\">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href=\"https://suricata.io/\">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/\">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:43:25.000Z",
+    "updatedAt": "2026-07-28T10:43:25.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-150346ad-6e0a-49d0-9997-26fe2361f915"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+      "item": [
+        {
+          "name": "Amazon Network Firewall Update Rule Group",
+          "id": "960499ff-6972-45db-8f7c-694d25a35bf9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+            },
+            "description": "<p>Updates the rule settings for the specified rule group. You use a rule group by reference in one or more firewall policies. When you modify a rule group, you modify all firewall policies that use the rule group. </p> <p>To update a rule group, first call <a>DescribeRuleGroup</a> to retrieve the current <a>RuleGroup</a> object, update the object as needed, and then provide the updated object to this call. </p>"
+          },
+          "response": [
+            {
+              "id": "1349e964-4b62-4de8-9755-f13937d04ce5",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"UpdateToken\": \"7e18eeea-688f-6239-0a72-73df012d0b49\",\n  \"RuleGroupResponse\": {\n    \"RuleGroupArn\": \"arn:awsrH>\",\n    \"RuleGroupName\": \"munST-Svz\",\n    \"RuleGroupId\": \"d1cb90e3-14fd-e65f-c886-ce44f9409d31\",\n    \"Description\": \"ps5:ric\",\n    \"Type\": \"STATELESS\",\n    \"Capacity\": \"<integer>\",\n    \"RuleGroupStatus\": \"ACTIVE\",\n    \"Tags\": [\n      {\n        \"Key\": \"v)D\",\n        \"Value\": \"-I\"\n      }\n    ],\n    \"ConsumedCapacity\": \"<integer>\",\n    \"NumberOfAssociations\": \"<integer>\",\n    \"EncryptionConfiguration\": {\n      \"Type\": \"AWS_OWNED_KMS_KEY\",\n      \"KeyId\": \"H70u]\"\n    },\n    \"SourceMetadata\": {\n      \"SourceArn\": \"arn:aws%0*qP\",\n      \"SourceUpdateToken\": \"58d7ccf9-272b-c9f9-75c7-236e7159af9c\"\n    },\n    \"SnsTopic\": \"arn:awsptd`I+X,6H\",\n    \"LastModifiedTime\": \"<dateTime>\"\n  }\n}",
+              "createdAt": "2026-07-28T10:43:25.000Z",
+              "updatedAt": "2026-07-28T10:43:25.000Z",
+              "uid": "35240-1349e964-4b62-4de8-9755-f13937d04ce5"
+            },
+            {
+              "id": "478128a8-a251-4159-b07c-c9a8e6e8c515",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:25.000Z",
+              "updatedAt": "2026-07-28T10:43:25.000Z",
+              "uid": "35240-478128a8-a251-4159-b07c-c9a8e6e8c515"
+            },
+            {
+              "id": "8ad36a32-47b7-4344-89b7-0e7f85fe4f00",
+              "name": "InvalidRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:25.000Z",
+              "updatedAt": "2026-07-28T10:43:25.000Z",
+              "uid": "35240-8ad36a32-47b7-4344-89b7-0e7f85fe4f00"
+            },
+            {
+              "id": "ff0775ee-b74c-4d93-a8f4-94ed03dddba0",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:25.000Z",
+              "updatedAt": "2026-07-28T10:43:25.000Z",
+              "uid": "35240-ff0775ee-b74c-4d93-a8f4-94ed03dddba0"
+            },
+            {
+              "id": "65b3731a-1eae-4f6f-9c42-2e4e36b4ff60",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:25.000Z",
+              "updatedAt": "2026-07-28T10:43:25.000Z",
+              "uid": "35240-65b3731a-1eae-4f6f-9c42-2e4e36b4ff60"
+            },
+            {
+              "id": "d5bffdf2-2ec2-4d6e-8a8e-0c703b00090b",
+              "name": "InvalidTokenException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateRuleGroup"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"4955561b-00d3-6895-748d-bf17ab68993b\",\n  \"RuleGroupArn\": \"arn:awsgI$HCLL8\",\n  \"RuleGroupName\": \"Tdj\",\n  \"RuleGroup\": {\n    \"RulesSource\": {\n      \"RulesString\": \"<string>\",\n      \"RulesSourceList\": {\n        \"Targets\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"TargetTypes\": [\n          \"HTTP_HOST\",\n          \"HTTP_HOST\"\n        ],\n        \"GeneratedRulesType\": \"DENYLIST\"\n      },\n      \"StatefulRules\": [\n        {\n          \"Action\": \"ALERT\",\n          \"Header\": {\n            \"Protocol\": \"MSN\",\n            \"Source\": \"'cowaGu*\",\n            \"SourcePort\": \"W`b\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \"LG\",\n            \"DestinationPort\": \"6q g*UJ\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"BuxHI90<\",\n              \"Settings\": [\n                \"2|[uo{q\",\n                \"yyMT\"\n              ]\n            },\n            {\n              \"Keyword\": \"+<TgBcGJ\",\n              \"Settings\": [\n                \" \",\n                \"aM}J@CU4U\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Action\": \"REJECT\",\n          \"Header\": {\n            \"Protocol\": \"DHCP\",\n            \"Source\": \"\\\"j{kw&$,\",\n            \"SourcePort\": \")JLnO\",\n            \"Direction\": \"FORWARD\",\n            \"Destination\": \";qFUWf>^\",\n            \"DestinationPort\": \")4.4[ECr2\"\n          },\n          \"RuleOptions\": [\n            {\n              \"Keyword\": \"6_bT};\",\n              \"Settings\": [\n                \" \",\n                \"a`\"\n              ]\n            },\n            {\n              \"Keyword\": \"6JmbDm\",\n              \"Settings\": [\n                \"l?^\",\n                \"#gcx\"\n              ]\n            }\n          ]\n        }\n      ],\n      \"StatelessRulesAndCustomActions\": {\n        \"StatelessRules\": [\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"5776E\"\n                  },\n                  {\n                    \"AddressDefinition\": \".fd7C2/9\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"1:ea4Bc/1\"\n                  },\n                  {\n                    \"AddressDefinition\": \"d7E/4\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          },\n          {\n            \"RuleDefinition\": {\n              \"MatchAttributes\": {\n                \"Sources\": [\n                  {\n                    \"AddressDefinition\": \"91e7\"\n                  },\n                  {\n                    \"AddressDefinition\": \"e/8\"\n                  }\n                ],\n                \"Destinations\": [\n                  {\n                    \"AddressDefinition\": \"EC\"\n                  },\n                  {\n                    \"AddressDefinition\": \"b6Ea9/8\"\n                  }\n                ],\n                \"SourcePorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"DestinationPorts\": [\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  },\n                  {\n                    \"FromPort\": \"<integer>\",\n                    \"ToPort\": \"<integer>\"\n                  }\n                ],\n                \"Protocols\": [\n                  \"<integer>\",\n                  \"<integer>\"\n                ],\n                \"TCPFlags\": [\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  },\n                  {\n                    \"Flags\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ],\n                    \"Masks\": [\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      },\n                      {\n                        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              \"Actions\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"Priority\": \"<integer>\"\n          }\n        ],\n        \"CustomActions\": [\n          {\n            \"ActionName\": \"JMT\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"poHMo\"\n                  }\n                ]\n              }\n            }\n          },\n          {\n            \"ActionName\": \"bXj\",\n            \"ActionDefinition\": {\n              \"PublishMetricAction\": {\n                \"Dimensions\": [\n                  {\n                    \"Value\": \"p0lU\"\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    },\n    \"RuleVariables\": {\n      \"IPSets\": {\n        \"quisec\": {\n          \"Definition\": [\n            \"0QhGrN4}\",\n            \"isu:ZN56F\"\n          ]\n        }\n      },\n      \"PortSets\": {\n        \"ea_5\": {\n          \"Definition\": [\n            \"8Mk?B,Y\",\n            \"_t\"\n          ]\n        },\n        \"ipsum5\": {\n          \"Definition\": [\n            \"$ABz\",\n            \"LU]0 @Th%Y\"\n          ]\n        },\n        \"occaecat_c_\": {\n          \"Definition\": [\n            \"T%x\",\n            \"mH?SvR\"\n          ]\n        }\n      }\n    },\n    \"ReferenceSets\": {\n      \"IPSetReferences\": {\n        \"sunt_d3\": {\n          \"ReferenceArn\": \"arn:awsw7wx-a1e7\"\n        },\n        \"deserunt038\": {\n          \"ReferenceArn\": \"arn:aws\"\n        },\n        \"eub\": {\n          \"ReferenceArn\": \"arn:awsQM!\"\n        },\n        \"voluptateb\": {\n          \"ReferenceArn\": \"arn:awsgQJz`ad%a\"\n        }\n      }\n    },\n    \"StatefulRuleOptions\": {\n      \"RuleOrder\": \"DEFAULT_ACTION_ORDER\"\n    }\n  },\n  \"Rules\": \"<string>\",\n  \"Type\": \"STATEFUL\",\n  \"Description\": \"X>yaX0.M$\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"#1[Bw@5~bGO0\\\\x/ q5T?u\"\n  },\n  \"SourceMetadata\": {\n    \"SourceArn\": \"arn:aws7qY6h\",\n    \"SourceUpdateToken\": \"b9c5b19a-2306-8cc1-9d8d-05febefb95d8\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateRuleGroup"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:25.000Z",
+              "updatedAt": "2026-07-28T10:43:25.000Z",
+              "uid": "35240-d5bffdf2-2ec2-4d6e-8a8e-0c703b00090b"
+            }
+          ],
+          "createdAt": "2026-07-28T10:43:25.000Z",
+          "updatedAt": "2026-07-28T10:43:25.000Z",
+          "uid": "35240-960499ff-6972-45db-8f7c-694d25a35bf9"
+        }
+      ],
+      "id": "6cf67266-41d5-4630-8022-4180df63623b",
+      "createdAt": "2026-07-28T10:43:25.000Z",
+      "updatedAt": "2026-07-28T10:43:25.000Z",
+      "uid": "35240-6cf67266-41d5-4630-8022-4180df63623b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://network-firewall.{{region}}.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "info": {
+    "_postman_id": "700e1345-e639-462f-b2fc-cabfa661465c",
+    "name": "AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.CreateTLSInspectionConfiguration API",
+    "description": "<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-apis.html\">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see <a href=\"http://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href=\"https://docs.aws.amazon.com/network-firewall/latest/developerguide/\">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href=\"https://suricata.io/\">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/\">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:41:44.000Z",
+    "updatedAt": "2026-07-28T10:41:44.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-700e1345-e639-462f-b2fc-cabfa661465c"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration",
+      "item": [
+        {
+          "name": "Amazon Network Firewall Create T L S Inspection Configuration",
+          "id": "f1efd3d8-a3a6-48af-bcc4-aadee425fedf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TLSInspectionConfigurationName\": \"cQ0U7pxJ-cP\",\n  \"TLSInspectionConfiguration\": {\n    \"ServerCertificateConfigurations\": [\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:awsV/]*P$\"\n          },\n          {\n            \"ResourceArn\": \"arn:awsFw0e|epK\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ba5D301da\"\n              },\n              {\n                \"AddressDefinition\": \"D2:Ea89B:\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"e.60:CD\"\n              },\n              {\n                \"AddressDefinition\": \"6.08.\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"dbdB\"\n              },\n              {\n                \"AddressDefinition\": \"14d\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"3A5C\"\n              },\n              {\n                \"AddressDefinition\": \"D03\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      },\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:aws5-J\"\n          },\n          {\n            \"ResourceArn\": \"arn:aws=\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ab:fCAE5\"\n              },\n              {\n                \"AddressDefinition\": \"dd6D/676\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"0Ae\"\n              },\n              {\n                \"AddressDefinition\": \"B:6e3335\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"8195cBc423/184\"\n              },\n              {\n                \"AddressDefinition\": \"efC5242256/7\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"88/8\"\n              },\n              {\n                \"AddressDefinition\": \"DeF:E.adf.9/555\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"Description\": \"F$c7{\",\n  \"Tags\": [\n    {\n      \"Key\": \"H\",\n      \"Value\": \"V0x0#n0\"\n    }\n  ],\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"mQl5f/CVOY[\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+            },
+            "description": "<p>Creates an Network Firewall TLS inspection configuration. A TLS inspection configuration contains the Certificate Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.</p> <p>After you create a TLS inspection configuration, you associate it with a firewall policy.</p> <p>To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.</p> <p>To manage a TLS inspection configuration's tags, use the standard Amazon Web Services resource tagging operations, <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.</p> <p>To retrieve information about TLS inspection configurations, use <a>ListTLSInspectionConfigurations</a> and <a>DescribeTLSInspectionConfiguration</a>.</p> <p> For more information about TLS inspection configurations, see <a href=\"https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html\">Decrypting SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>. </p>"
+          },
+          "response": [
+            {
+              "id": "47e9392b-9be0-4c14-8afc-7678aa8553b4",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationName\": \"cQ0U7pxJ-cP\",\n  \"TLSInspectionConfiguration\": {\n    \"ServerCertificateConfigurations\": [\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:awsV/]*P$\"\n          },\n          {\n            \"ResourceArn\": \"arn:awsFw0e|epK\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ba5D301da\"\n              },\n              {\n                \"AddressDefinition\": \"D2:Ea89B:\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"e.60:CD\"\n              },\n              {\n                \"AddressDefinition\": \"6.08.\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"dbdB\"\n              },\n              {\n                \"AddressDefinition\": \"14d\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"3A5C\"\n              },\n              {\n                \"AddressDefinition\": \"D03\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      },\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:aws5-J\"\n          },\n          {\n            \"ResourceArn\": \"arn:aws=\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ab:fCAE5\"\n              },\n              {\n                \"AddressDefinition\": \"dd6D/676\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"0Ae\"\n              },\n              {\n                \"AddressDefinition\": \"B:6e3335\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"8195cBc423/184\"\n              },\n              {\n                \"AddressDefinition\": \"efC5242256/7\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"88/8\"\n              },\n              {\n                \"AddressDefinition\": \"DeF:E.adf.9/555\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"Description\": \"F$c7{\",\n  \"Tags\": [\n    {\n      \"Key\": \"H\",\n      \"Value\": \"V0x0#n0\"\n    }\n  ],\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"mQl5f/CVOY[\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"UpdateToken\": \"9a4fd62b-45a6-fa86-a6aa-8d439f0ed297\",\n  \"TLSInspectionConfigurationResponse\": {\n    \"TLSInspectionConfigurationArn\": \"arn:aws\",\n    \"TLSInspectionConfigurationName\": \"lX\",\n    \"TLSInspectionConfigurationId\": \"50c9bee4-95af-dc11-3640-9aa47d26c996\",\n    \"TLSInspectionConfigurationStatus\": \"ACTIVE\",\n    \"Description\": \"M\",\n    \"Tags\": [\n      {\n        \"Key\": \"&WvQyP\",\n        \"Value\": \"NqR!\"\n      }\n    ],\n    \"LastModifiedTime\": \"<dateTime>\",\n    \"NumberOfAssociations\": \"<integer>\",\n    \"EncryptionConfiguration\": {\n      \"Type\": \"CUSTOMER_KMS\",\n      \"KeyId\": \"%y]J]F@rIeQw:v>7k\"\n    },\n    \"Certificates\": [\n      {\n        \"CertificateArn\": \"arn:awsLCd7OZBqm\",\n        \"CertificateSerial\": \"<string>\",\n        \"Status\": \"<string>\",\n        \"StatusMessage\": \"qW\"\n      },\n      {\n        \"CertificateArn\": \"arn:awsD\",\n        \"CertificateSerial\": \"<string>\",\n        \"Status\": \"<string>\",\n        \"StatusMessage\": \"Lx9-qGlny\"\n      }\n    ]\n  }\n}",
+              "createdAt": "2026-07-28T10:41:45.000Z",
+              "updatedAt": "2026-07-28T10:41:45.000Z",
+              "uid": "35240-47e9392b-9be0-4c14-8afc-7678aa8553b4"
+            },
+            {
+              "id": "eab4fe14-9b07-4e9e-a492-9c8670923898",
+              "name": "InvalidRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationName\": \"cQ0U7pxJ-cP\",\n  \"TLSInspectionConfiguration\": {\n    \"ServerCertificateConfigurations\": [\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:awsV/]*P$\"\n          },\n          {\n            \"ResourceArn\": \"arn:awsFw0e|epK\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ba5D301da\"\n              },\n              {\n                \"AddressDefinition\": \"D2:Ea89B:\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"e.60:CD\"\n              },\n              {\n                \"AddressDefinition\": \"6.08.\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"dbdB\"\n              },\n              {\n                \"AddressDefinition\": \"14d\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"3A5C\"\n              },\n              {\n                \"AddressDefinition\": \"D03\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      },\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:aws5-J\"\n          },\n          {\n            \"ResourceArn\": \"arn:aws=\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ab:fCAE5\"\n              },\n              {\n                \"AddressDefinition\": \"dd6D/676\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"0Ae\"\n              },\n              {\n                \"AddressDefinition\": \"B:6e3335\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"8195cBc423/184\"\n              },\n              {\n                \"AddressDefinition\": \"efC5242256/7\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"88/8\"\n              },\n              {\n                \"AddressDefinition\": \"DeF:E.adf.9/555\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"Description\": \"F$c7{\",\n  \"Tags\": [\n    {\n      \"Key\": \"H\",\n      \"Value\": \"V0x0#n0\"\n    }\n  ],\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"mQl5f/CVOY[\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:45.000Z",
+              "updatedAt": "2026-07-28T10:41:45.000Z",
+              "uid": "35240-eab4fe14-9b07-4e9e-a492-9c8670923898"
+            },
+            {
+              "id": "40497eef-4ac0-4f50-8ceb-01f7dcf1670a",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationName\": \"cQ0U7pxJ-cP\",\n  \"TLSInspectionConfiguration\": {\n    \"ServerCertificateConfigurations\": [\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:awsV/]*P$\"\n          },\n          {\n            \"ResourceArn\": \"arn:awsFw0e|epK\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ba5D301da\"\n              },\n              {\n                \"AddressDefinition\": \"D2:Ea89B:\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"e.60:CD\"\n              },\n              {\n                \"AddressDefinition\": \"6.08.\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"dbdB\"\n              },\n              {\n                \"AddressDefinition\": \"14d\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"3A5C\"\n              },\n              {\n                \"AddressDefinition\": \"D03\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      },\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:aws5-J\"\n          },\n          {\n            \"ResourceArn\": \"arn:aws=\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ab:fCAE5\"\n              },\n              {\n                \"AddressDefinition\": \"dd6D/676\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"0Ae\"\n              },\n              {\n                \"AddressDefinition\": \"B:6e3335\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"8195cBc423/184\"\n              },\n              {\n                \"AddressDefinition\": \"efC5242256/7\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"88/8\"\n              },\n              {\n                \"AddressDefinition\": \"DeF:E.adf.9/555\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"Description\": \"F$c7{\",\n  \"Tags\": [\n    {\n      \"Key\": \"H\",\n      \"Value\": \"V0x0#n0\"\n    }\n  ],\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"mQl5f/CVOY[\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:45.000Z",
+              "updatedAt": "2026-07-28T10:41:45.000Z",
+              "uid": "35240-40497eef-4ac0-4f50-8ceb-01f7dcf1670a"
+            },
+            {
+              "id": "c1d34a83-af22-4226-8571-e6dc359b93ac",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationName\": \"cQ0U7pxJ-cP\",\n  \"TLSInspectionConfiguration\": {\n    \"ServerCertificateConfigurations\": [\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:awsV/]*P$\"\n          },\n          {\n            \"ResourceArn\": \"arn:awsFw0e|epK\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ba5D301da\"\n              },\n              {\n                \"AddressDefinition\": \"D2:Ea89B:\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"e.60:CD\"\n              },\n              {\n                \"AddressDefinition\": \"6.08.\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"dbdB\"\n              },\n              {\n                \"AddressDefinition\": \"14d\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"3A5C\"\n              },\n              {\n                \"AddressDefinition\": \"D03\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      },\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:aws5-J\"\n          },\n          {\n            \"ResourceArn\": \"arn:aws=\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"ab:fCAE5\"\n              },\n              {\n                \"AddressDefinition\": \"dd6D/676\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"0Ae\"\n              },\n              {\n                \"AddressDefinition\": \"B:6e3335\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"8195cBc423/184\"\n              },\n              {\n                \"AddressDefinition\": \"efC5242256/7\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"88/8\"\n              },\n              {\n                \"AddressDefinition\": \"DeF:E.adf.9/555\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"Description\": \"F$c7{\",\n  \"Tags\": [\n    {\n      \"Key\": \"H\",\n      \"Value\": \"V0x0#n0\"\n    }\n  ],\n  \"EncryptionConfiguration\": {\n    \"Type\": \"CUSTOMER_KMS\",\n    \"KeyId\": \"mQl5f/CVOY[\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:45.000Z",
+              "updatedAt": "2026-07-28T10:41:45.000Z",
+              "uid": "35240-c1d34a83-af22-4226-8571-e6dc359b93ac"
+            }
+          ],
+          "createdAt": "2026-07-28T10:41:45.000Z",
+          "updatedAt": "2026-07-28T10:41:45.000Z",
+          "uid": "35240-f1efd3d8-a3a6-48af-bcc4-aadee425fedf"
+        }
+      ],
+      "id": "24f0a214-645c-48be-a646-b084ffffa551",
+      "createdAt": "2026-07-28T10:41:45.000Z",
+      "updatedAt": "2026-07-28T10:41:45.000Z",
+      "uid": "35240-24f0a214-645c-48be-a646-b084ffffa551"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://network-firewall.{{region}}.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+{
+  "info": {
+    "_postman_id": "311c0380-82a9-4ed0-bec3-1b4785d03a1b",
+    "name": "AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.DescribeTLSInspectionConfiguration API",
+    "description": "<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-apis.html\">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see <a href=\"http://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href=\"https://docs.aws.amazon.com/network-firewall/latest/developerguide/\">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href=\"https://suricata.io/\">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/\">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:41:58.000Z",
+    "updatedAt": "2026-07-28T10:41:58.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-311c0380-82a9-4ed0-bec3-1b4785d03a1b"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+      "item": [
+        {
+          "name": "Amazon Network Firewall Describe T L S Inspection Configuration",
+          "id": "9fa2b98f-edda-4d87-a9d9-194a824eef6c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TLSInspectionConfigurationArn\": \"arn:aws~ttt\",\n  \"TLSInspectionConfigurationName\": \"2-Gn8ib\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+            },
+            "description": "Returns the data objects for the specified TLS inspection configuration."
+          },
+          "response": [
+            {
+              "id": "6a3df340-0371-42fe-b032-1c1160e3f9ec",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationArn\": \"arn:aws~ttt\",\n  \"TLSInspectionConfigurationName\": \"2-Gn8ib\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"UpdateToken\": \"407f218e-2996-ad10-42f0-cb0afbc8905e\",\n  \"TLSInspectionConfigurationResponse\": {\n    \"TLSInspectionConfigurationArn\": \"arn:aws<c.\\\"\",\n    \"TLSInspectionConfigurationName\": \"HTLGOMNC\",\n    \"TLSInspectionConfigurationId\": \"bf0c2e11-c12c-dd48-c464-5f0cc66128c8\",\n    \"TLSInspectionConfigurationStatus\": \"ACTIVE\",\n    \"Description\": \"T;#\",\n    \"Tags\": [\n      {\n        \"Key\": \"~U>;iAYpk0\",\n        \"Value\": \"\\\\\"\n      }\n    ],\n    \"LastModifiedTime\": \"<dateTime>\",\n    \"NumberOfAssociations\": \"<integer>\",\n    \"EncryptionConfiguration\": {\n      \"Type\": \"AWS_OWNED_KMS_KEY\",\n      \"KeyId\": \"^YxY4\"\n    },\n    \"Certificates\": [\n      {\n        \"CertificateArn\": \"arn:aws}ee^\",\n        \"CertificateSerial\": \"<string>\",\n        \"Status\": \"<string>\",\n        \"StatusMessage\": \"hIdQmgBXTt\"\n      },\n      {\n        \"CertificateArn\": \"arn:awse\",\n        \"CertificateSerial\": \"<string>\",\n        \"Status\": \"<string>\",\n        \"StatusMessage\": \"nxCfQx-\"\n      }\n    ]\n  },\n  \"TLSInspectionConfiguration\": {\n    \"ServerCertificateConfigurations\": [\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:aws\"\n          },\n          {\n            \"ResourceArn\": \"arn:aws`?hq2X#I\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \".A5:9A/4\"\n              },\n              {\n                \"AddressDefinition\": \"7:46977ce/27\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"5fF03A8./0\"\n              },\n              {\n                \"AddressDefinition\": \"D/282\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"fBd:Ce\"\n              },\n              {\n                \"AddressDefinition\": \"7099\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"8B3fa.A12/683\"\n              },\n              {\n                \"AddressDefinition\": \"9\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      },\n      {\n        \"ServerCertificates\": [\n          {\n            \"ResourceArn\": \"arn:awsy)PqMz\\\\E\"\n          },\n          {\n            \"ResourceArn\": \"arn:awsR!k j'D\"\n          }\n        ],\n        \"Scopes\": [\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"1e\"\n              },\n              {\n                \"AddressDefinition\": \"A\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"ee7be2f6ace\"\n              },\n              {\n                \"AddressDefinition\": \"178BFC8Aa/48\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          },\n          {\n            \"Sources\": [\n              {\n                \"AddressDefinition\": \"7..0/0\"\n              },\n              {\n                \"AddressDefinition\": \"EF2/97\"\n              }\n            ],\n            \"Destinations\": [\n              {\n                \"AddressDefinition\": \"7Cb8/9\"\n              },\n              {\n                \"AddressDefinition\": \"f2395\"\n              }\n            ],\n            \"SourcePorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"DestinationPorts\": [\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              },\n              {\n                \"FromPort\": \"<integer>\",\n                \"ToPort\": \"<integer>\"\n              }\n            ],\n            \"Protocols\": [\n              \"<integer>\",\n              \"<integer>\"\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "createdAt": "2026-07-28T10:41:58.000Z",
+              "updatedAt": "2026-07-28T10:41:58.000Z",
+              "uid": "35240-6a3df340-0371-42fe-b032-1c1160e3f9ec"
+            },
+            {
+              "id": "b0fc7f78-9f32-40ef-ad0f-e44a908a781c",
+              "name": "InvalidRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationArn\": \"arn:aws~ttt\",\n  \"TLSInspectionConfigurationName\": \"2-Gn8ib\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:58.000Z",
+              "updatedAt": "2026-07-28T10:41:58.000Z",
+              "uid": "35240-b0fc7f78-9f32-40ef-ad0f-e44a908a781c"
+            },
+            {
+              "id": "9e6b4561-9d1c-429b-a21a-6cb0409ec1b1",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationArn\": \"arn:aws~ttt\",\n  \"TLSInspectionConfigurationName\": \"2-Gn8ib\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:58.000Z",
+              "updatedAt": "2026-07-28T10:41:58.000Z",
+              "uid": "35240-9e6b4561-9d1c-429b-a21a-6cb0409ec1b1"
+            },
+            {
+              "id": "0b30a5a5-56af-40ca-bab3-dc66b4d8a55d",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationArn\": \"arn:aws~ttt\",\n  \"TLSInspectionConfigurationName\": \"2-Gn8ib\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:58.000Z",
+              "updatedAt": "2026-07-28T10:41:58.000Z",
+              "uid": "35240-0b30a5a5-56af-40ca-bab3-dc66b4d8a55d"
+            },
+            {
+              "id": "177c648e-f5ca-4b1b-b90c-be4b5f03624e",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TLSInspectionConfigurationArn\": \"arn:aws~ttt\",\n  \"TLSInspectionConfigurationName\": \"2-Gn8ib\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:41:58.000Z",
+              "updatedAt": "2026-07-28T10:41:58.000Z",
+              "uid": "35240-177c648e-f5ca-4b1b-b90c-be4b5f03624e"
+            }
+          ],
+          "createdAt": "2026-07-28T10:41:58.000Z",
+          "updatedAt": "2026-07-28T10:41:58.000Z",
+          "uid": "35240-9fa2b98f-edda-4d87-a9d9-194a824eef6c"
+        }
+      ],
+      "id": "59402cea-ad69-4dba-963f-4f04ce5224c8",
+      "createdAt": "2026-07-28T10:41:58.000Z",
+      "updatedAt": "2026-07-28T10:41:58.000Z",
+      "uid": "35240-59402cea-ad69-4dba-963f-4f04ce5224c8"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://network-firewall.{{region}}.amazonaws.com"
+    }
+  ]
+}

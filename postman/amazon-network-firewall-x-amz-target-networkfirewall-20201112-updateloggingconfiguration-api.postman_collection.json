@@ -1,0 +1,750 @@
+{
+  "info": {
+    "_postman_id": "a08fb0fe-7d7e-4707-92a7-fa5777ab8c93",
+    "name": "AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.UpdateLoggingConfiguration API",
+    "description": "<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-apis.html\">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see <a href=\"http://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href=\"https://docs.aws.amazon.com/network-firewall/latest/developerguide/\">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href=\"https://suricata.io/\">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/\">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:43:23.000Z",
+    "updatedAt": "2026-07-28T10:43:24.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a08fb0fe-7d7e-4707-92a7-fa5777ab8c93"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+      "item": [
+        {
+          "name": "Amazon Network Firewall Update Logging Configuration",
+          "id": "0e8018d1-5809-4ee0-b919-f518c6fc334b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+            },
+            "description": "<p>Sets the logging configuration for the specified firewall. </p> <p>To change the logging configuration, retrieve the <a>LoggingConfiguration</a> by calling <a>DescribeLoggingConfiguration</a>, then change it and provide the modified object to this update call. You must change the logging configuration one <a>LogDestinationConfig</a> at a time inside the retrieved <a>LoggingConfiguration</a> object. </p> <p>You can perform only one of the following actions in any call to <code>UpdateLoggingConfiguration</code>: </p> <ul> <li> <p>Create a new log destination object by adding a single <code>LogDestinationConfig</code> array element to <code>LogDestinationConfigs</code>.</p> </li> <li> <p>Delete a log destination object by removing a single <code>LogDestinationConfig</code> array element from <code>LogDestinationConfigs</code>.</p> </li> <li> <p>Change the <code>LogDestination</code> setting in a single <code>LogDestinationConfig</code> array element.</p> </li> </ul> <p>You can't change the <code>LogDestinationType</code> or <code>LogType</code> in a <code>LogDestinationConfig</code>. To change these settings, delete the existing <code>LogDestinationConfig</code> object and create a new one, using two separate calls to this update operation.</p>"
+          },
+          "response": [
+            {
+              "id": "438dd598-42b9-4bfc-85ba-7d21dcaff7b1",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"FirewallArn\": \"arn:aws@R:Q_{%EL\",\n  \"FirewallName\": \"5XoANMXE4\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"S3\",\n        \"LogDestination\": {\n          \"Duis__ce\": \"p\u2008#\u2000\\f\u200a@w\u2009\",\n          \"ullamco_92b\": \" \"\n        }\n      },\n      {\n        \"LogType\": \"ALERT\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"voluptate___b\": \"FAph]\u200a+\u2002[i\",\n          \"ex_e\": \" \",\n          \"voluptate__d5\": \" \"\n        }\n      }\n    ]\n  }\n}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-438dd598-42b9-4bfc-85ba-7d21dcaff7b1"
+            },
+            {
+              "id": "614b878d-5b16-493a-b183-3aa25c6bf458",
+              "name": "InvalidRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-614b878d-5b16-493a-b183-3aa25c6bf458"
+            },
+            {
+              "id": "365358ea-3026-4ecb-9f58-d189e501c080",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-365358ea-3026-4ecb-9f58-d189e501c080"
+            },
+            {
+              "id": "c2deb66b-9748-4bb4-94c7-015f99834663",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-c2deb66b-9748-4bb4-94c7-015f99834663"
+            },
+            {
+              "id": "0b44e893-c723-477a-ae68-bf4ea05ea934",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-0b44e893-c723-477a-ae68-bf4ea05ea934"
+            },
+            {
+              "id": "09498bdf-0ba4-4316-af8a-0e05005284c0",
+              "name": "InvalidTokenException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-09498bdf-0ba4-4316-af8a-0e05005284c0"
+            },
+            {
+              "id": "103be140-595b-42f7-a6bb-21f3f3fef3a3",
+              "name": "LogDestinationPermissionException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FirewallArn\": \"arn:awsQm\",\n  \"FirewallName\": \"hvLn59k\",\n  \"LoggingConfiguration\": {\n    \"LogDestinationConfigs\": [\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"Utc0a\": \"+Y\",\n          \"cupidatatbe9\": \"\u180e\u20029\",\n          \"magna067\": \"I\u1680U/\u2009uX\"\n        }\n      },\n      {\n        \"LogType\": \"FLOW\",\n        \"LogDestinationType\": \"CloudWatchLogs\",\n        \"LogDestination\": {\n          \"dolor4e\": \" \",\n          \"Duis_c_\": \"+q|_\u2001Y-J\"\n        }\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateLoggingConfiguration"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:24.000Z",
+              "updatedAt": "2026-07-28T10:43:24.000Z",
+              "uid": "35240-103be140-595b-42f7-a6bb-21f3f3fef3a3"
+            }
+          ],
+          "createdAt": "2026-07-28T10:43:24.000Z",
+          "updatedAt": "2026-07-28T10:43:24.000Z",
+          "uid": "35240-0e8018d1-5809-4ee0-b919-f518c6fc334b"
+        }
+      ],
+      "id": "92fe3299-4abe-4a6f-9587-d07cb87a31f3",
+      "createdAt": "2026-07-28T10:43:24.000Z",
+      "updatedAt": "2026-07-28T10:43:24.000Z",
+      "uid": "35240-92fe3299-4abe-4a6f-9587-d07cb87a31f3"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://network-firewall.{{region}}.amazonaws.com"
+    }
+  ]
+}

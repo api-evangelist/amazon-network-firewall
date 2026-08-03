@@ -1,0 +1,662 @@
+{
+  "info": {
+    "_postman_id": "d32e7cb8-8624-4978-b08c-8d45a071fceb",
+    "name": "AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicy API",
+    "description": "<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-apis.html\">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see <a href=\"http://aws.amazon.com/tools/#SDKs\">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href=\"https://docs.aws.amazon.com/network-firewall/latest/developerguide/\">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href=\"https://suricata.io/\">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/\">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:43:21.000Z",
+    "updatedAt": "2026-07-28T10:43:22.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d32e7cb8-8624-4978-b08c-8d45a071fceb"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+      "item": [
+        {
+          "name": "Amazon Network Firewall Update Firewall Policy",
+          "id": "eb477b46-838f-4a76-9b24-9e5f2977c5d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+            },
+            "description": "Updates the properties of the specified firewall policy."
+          },
+          "response": [
+            {
+              "id": "7d2d86af-67cb-4842-904a-b6fa7a06adcc",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"UpdateToken\": \"4d9913c9-4c99-3db7-58f9-93a0f1a74c37\",\n  \"FirewallPolicyResponse\": {\n    \"FirewallPolicyName\": \"MvkIoIJLr\",\n    \"FirewallPolicyArn\": \"arn:awsxJu!.hy?\",\n    \"FirewallPolicyId\": \"20299dee-b82b-d045-d7b2-afe53500c261\",\n    \"Description\": \"Rh\",\n    \"FirewallPolicyStatus\": \"DELETING\",\n    \"Tags\": [\n      {\n        \"Key\": \")QVb3h\",\n        \"Value\": \"8\"\n      }\n    ],\n    \"ConsumedStatelessRuleCapacity\": \"<integer>\",\n    \"ConsumedStatefulRuleCapacity\": \"<integer>\",\n    \"NumberOfAssociations\": \"<integer>\",\n    \"EncryptionConfiguration\": {\n      \"Type\": \"CUSTOMER_KMS\",\n      \"KeyId\": \"&2#Vz%M5gO(kXP\"\n    },\n    \"LastModifiedTime\": \"<dateTime>\"\n  }\n}",
+              "createdAt": "2026-07-28T10:43:22.000Z",
+              "updatedAt": "2026-07-28T10:43:22.000Z",
+              "uid": "35240-7d2d86af-67cb-4842-904a-b6fa7a06adcc"
+            },
+            {
+              "id": "cc0acb03-82f6-45cf-8526-425a7d671317",
+              "name": "InvalidRequestException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:22.000Z",
+              "updatedAt": "2026-07-28T10:43:22.000Z",
+              "uid": "35240-cc0acb03-82f6-45cf-8526-425a7d671317"
+            },
+            {
+              "id": "aff719e4-e3ba-4344-91c4-02d424d6c046",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:22.000Z",
+              "updatedAt": "2026-07-28T10:43:22.000Z",
+              "uid": "35240-aff719e4-e3ba-4344-91c4-02d424d6c046"
+            },
+            {
+              "id": "efc1d2f0-e0dc-498b-bcdc-5f173ad8d843",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:22.000Z",
+              "updatedAt": "2026-07-28T10:43:22.000Z",
+              "uid": "35240-efc1d2f0-e0dc-498b-bcdc-5f173ad8d843"
+            },
+            {
+              "id": "b2c3853a-728f-4a4d-b4f5-4d1b4bec9713",
+              "name": "InternalServerError",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:22.000Z",
+              "updatedAt": "2026-07-28T10:43:22.000Z",
+              "uid": "35240-b2c3853a-728f-4a4d-b4f5-4d1b4bec9713"
+            },
+            {
+              "id": "88741a13-6501-4619-9303-b3939dd3f006",
+              "name": "InvalidTokenException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "NetworkFirewall_20201112.UpdateFirewallPolicy"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"UpdateToken\": \"830ce11d-a306-18bb-b26e-a9716f9ed9c9\",\n  \"FirewallPolicy\": {\n    \"StatelessDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessFragmentDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatelessRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsXCGUVuRz8\",\n        \"Priority\": \"<integer>\"\n      },\n      {\n        \"ResourceArn\": \"arn:aws'b0>*3dK0A\",\n        \"Priority\": \"<integer>\"\n      }\n    ],\n    \"StatelessCustomActions\": [\n      {\n        \"ActionName\": \"4EsFZBC0\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"n\"\n              }\n            ]\n          }\n        }\n      },\n      {\n        \"ActionName\": \"1A19hzQNl\",\n        \"ActionDefinition\": {\n          \"PublishMetricAction\": {\n            \"Dimensions\": [\n              {\n                \"Value\": \"D2tBvRD g\"\n              }\n            ]\n          }\n        }\n      }\n    ],\n    \"StatefulRuleGroupReferences\": [\n      {\n        \"ResourceArn\": \"arn:awsRR0nT\",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      },\n      {\n        \"ResourceArn\": \"arn:awsd \",\n        \"Priority\": \"<integer>\",\n        \"Override\": {\n          \"Action\": \"DROP_TO_ALERT\"\n        }\n      }\n    ],\n    \"StatefulDefaultActions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"StatefulEngineOptions\": {\n      \"RuleOrder\": \"STRICT_ORDER\",\n      \"StreamExceptionPolicy\": \"DROP\"\n    },\n    \"TLSInspectionConfigurationArn\": \"arn:awsyp+t\"\n  },\n  \"FirewallPolicyArn\": \"arn:awsnU\\\"1\",\n  \"FirewallPolicyName\": \"a\",\n  \"Description\": \"b(B(MLm48s\",\n  \"DryRun\": \"<boolean>\",\n  \"EncryptionConfiguration\": {\n    \"Type\": \"AWS_OWNED_KMS_KEY\",\n    \"KeyId\": \"ze,>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=NetworkFirewall_20201112.UpdateFirewallPolicy"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:43:22.000Z",
+              "updatedAt": "2026-07-28T10:43:22.000Z",
+              "uid": "35240-88741a13-6501-4619-9303-b3939dd3f006"
+            }
+          ],
+          "createdAt": "2026-07-28T10:43:22.000Z",
+          "updatedAt": "2026-07-28T10:43:22.000Z",
+          "uid": "35240-eb477b46-838f-4a76-9b24-9e5f2977c5d7"
+        }
+      ],
+      "id": "4643b78a-3aca-4931-88f2-b16ba42d81e9",
+      "createdAt": "2026-07-28T10:43:22.000Z",
+      "updatedAt": "2026-07-28T10:43:22.000Z",
+      "uid": "35240-4643b78a-3aca-4931-88f2-b16ba42d81e9"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://network-firewall.{{region}}.amazonaws.com"
+    }
+  ]
+}
