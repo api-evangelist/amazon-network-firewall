@@ -39,7 +39,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.associatefirewallpolicy.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy'
   properties:
   - type: OpenAPI
@@ -150,7 +151,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.createtlsinspectionconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.CreateTLSInspectionConfiguration'
   properties:
   - type: OpenAPI
@@ -261,7 +263,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.deletetlsinspectionconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration'
   properties:
   - type: OpenAPI
@@ -306,7 +309,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.describefirewallpolicy.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.DescribeFirewallPolicy'
   properties:
   - type: OpenAPI
@@ -329,7 +333,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.describeloggingconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.DescribeLoggingConfiguration'
   properties:
   - type: OpenAPI
@@ -352,7 +357,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.describeresourcepolicy.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.DescribeResourcePolicy'
   properties:
   - type: OpenAPI
@@ -397,7 +403,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.describerulegroupmetadata.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.DescribeRuleGroupMetadata'
   properties:
   - type: OpenAPI
@@ -421,7 +428,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.describetlsinspectionconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.DescribeTLSInspectionConfiguration'
   properties:
   - type: OpenAPI
@@ -554,7 +562,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.listtlsinspectionconfigurations.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.ListTLSInspectionConfigurations'
   properties:
   - type: OpenAPI
@@ -643,7 +652,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewalldeleteprotection.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallDeleteProtection'
   properties:
   - type: OpenAPI
@@ -666,7 +676,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewalldescription.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallDescription'
   properties:
   - type: OpenAPI
@@ -690,7 +701,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewallencryptionconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallEncryptionConfiguration'
   properties:
   - type: OpenAPI
@@ -736,7 +748,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatefirewallpolicychangeprotection.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicyChangeProtection'
   properties:
   - type: OpenAPI
@@ -759,7 +772,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.updateloggingconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateLoggingConfiguration'
   properties:
   - type: OpenAPI
@@ -804,7 +818,8 @@ apis:
     — 1 operation(s) for #x amz target=networkfirewall 20201112.updatesubnetchangeprotection.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateSubnetChangeProtection'
   properties:
   - type: OpenAPI
@@ -827,7 +842,8 @@ apis:
     Firewall — 1 operation(s) for #x amz target=networkfirewall 20201112.updatetlsinspectionconfiguration.
   humanURL: https://aws.amazon.com/network-firewall/
   baseURL: https://network-firewall.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration'
   properties:
   - type: OpenAPI
