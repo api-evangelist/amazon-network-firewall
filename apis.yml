@@ -5,6 +5,18 @@ description: >-
   virtual private cloud (VPC). It enables you to filter traffic at the perimeter of your VPC with a flexible rules
   engine with support for thousands of custom rules.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
