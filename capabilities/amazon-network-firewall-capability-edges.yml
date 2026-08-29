@@ -1,0 +1,213 @@
+slug: amazon-network-firewall
+provider: Amazon Network Firewall
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 21
+edges:
+- tag: '#X Amz Target=NetworkFirewall 20201112.DescribeRuleGroup'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.8
+  evidence: DescribeRuleGroup ... schemas StatefulRuleProtocol, IPSet, RuleOption — vendor is a "stateful,
+    managed, network firewall and intrusion detection and prevention service"
+  reason: Operation retrieves network firewall rule group definitions (stateless/stateful rules, IP sets,
+    port ranges). This is management of network security controls, i.e. Cybersecurity Management. No single
+    L2 cleanly covers firewall rule configuration, so L1 only.
+- tag: '#X Amz Target=NetworkFirewall 20201112.DescribeTLSInspectionConfiguration'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.8
+  evidence: DescribeTLSInspectionConfiguration ... TLSInspectionConfiguration, ServerCertificateConfigurations,
+    EncryptionConfiguration
+  reason: TLS inspection configuration and server certificate scoping for the firewall is a security control/inspection
+    capability — Cybersecurity Management; L2 ambiguous between architecture and threat detection.
+- tag: '#X Amz Target=NetworkFirewall 20201112.ListFirewallPolicies'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.8
+  evidence: ListFirewallPolicies ... FirewallPolicies, FirewallPolicyMetadata
+  reason: Enumerates firewall policies governing traffic filtering — network security control management
+    under Cybersecurity Management.
+- tag: '#X Amz Target=NetworkFirewall 20201112.DescribeRuleGroupMetadata'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.78
+  evidence: DescribeRuleGroupMetadata ... RuleGroupType, RuleCapacity, StatefulRuleOptions
+  reason: Metadata read for firewall rule groups — configuration of network security filtering controls,
+    so Cybersecurity Management at L1; too thin to pick an L2.
+- tag: '#X Amz Target=NetworkFirewall 20201112.ListFirewalls'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.78
+  evidence: ListFirewalls ... Firewalls, FirewallMetadata, VpcId
+  reason: Inventory of deployed firewalls in VPCs — management of network security controls, Cybersecurity
+    Management at L1.
+- tag: '#X Amz Target=NetworkFirewall 20201112.ListRuleGroups'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.78
+  evidence: ListRuleGroups ... RuleGroups, RuleGroupType, ResourceManagedStatus
+  reason: Lists firewall rule groups (security filtering rule sets) — Cybersecurity Management; no L2
+    fits precisely.
+- tag: '#X Amz Target=NetworkFirewall 20201112.ListTLSInspectionConfigurations'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.78
+  evidence: ListTLSInspectionConfigurations ... TLSInspectionConfigurationMetadata
+  reason: Enumeration of TLS inspection configurations used by the firewall — security control configuration,
+    Cybersecurity Management at L1.
+- tag: '#X Amz Target=NetworkFirewall 20201112.CreateFirewall'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.75
+  evidence: 'CreateFirewall  Amazon Network Firewall Create Firewall; schemas: EncryptionConfiguration,
+    VpcId, SyncStates'
+  reason: Provisions a managed network firewall for a VPC — implementation of security controls/patterns,
+    i.e. security architecture. Alternative reading as cloud infrastructure provisioning keeps confidence
+    below 0.8.
+- tag: '#X Amz Target=NetworkFirewall 20201112.CreateFirewallPolicy'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.75
+  evidence: 'CreateFirewallPolicy — schemas: FirewallPolicy, StatefulRuleGroupReferences, StatelessActions;
+    vendor: "stateful, managed, network firewall and intrusion detection and prevention service"'
+  reason: Creating network firewall policies is security control design/configuration — Cybersecurity
+    Management, security architecture (secure design/patterns) is the closest fit; alternative reading
+    is IT infrastructure but the object is explicitly a firewall policy.
+- tag: '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallPolicy'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.75
+  evidence: 'UpdateFirewallPolicy ... schemas: FirewallPolicy, StatefulRuleGroupReferences, StatelessActions'
+  reason: Defines firewall rule policy for traffic filtering — network security control definition, mapping
+    to Cybersecurity Management at L1; policy here is a technical ruleset, not corporate policy management.
+- tag: '#X Amz Target=NetworkFirewall 20201112.CreateRuleGroup'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.72
+  evidence: 'CreateRuleGroup — schemas: StatefulRuleProtocol, RuleOption, StatefulAction, IPSet, PortRanges'
+  reason: Defining firewall rule groups (protocols, ports, IP sets, actions) is network security control
+    configuration under Cybersecurity Management.
+- tag: '#X Amz Target=NetworkFirewall 20201112.CreateTLSInspectionConfiguration'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.72
+  evidence: 'CreateTLSInspectionConfiguration — schemas: TLSInspectionConfiguration, ServerCertificateConfigurations,
+    ServerCertificateScope'
+  reason: TLS inspection configuration for a network firewall is a security control/architecture concern,
+    not a generic IT service.
+- tag: '#X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.7
+  evidence: AssociateFirewallPolicy  Amazon Network Firewall Associate Firewall Policy; "stateful, managed,
+    network firewall and intrusion detection and prevention service for your virtual private cloud"
+  reason: Associating a firewall policy with a firewall is configuration of network security controls
+    — security architecture/controls implementation. Could arguably be infrastructure management (BC-600.50),
+    hence moderate confidence.
+- tag: '#X Amz Target=NetworkFirewall 20201112.DeleteFirewall'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.7
+  evidence: 'DeleteFirewall — schemas: DeleteFirewallRequest, VpcId, ConfigurationSyncState, IPAddressType'
+  reason: Lifecycle management of a VPC network firewall resource; security control deployment under Cybersecurity
+    Management.
+- tag: '#X Amz Target=NetworkFirewall 20201112.DeleteFirewallPolicy'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.7
+  evidence: 'DeleteFirewallPolicy — schemas: DeleteFirewallPolicyRequest, FirewallPolicyResponse'
+  reason: Firewall policy lifecycle operation — network security control management.
+- tag: '#X Amz Target=NetworkFirewall 20201112.DeleteRuleGroup'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.7
+  evidence: 'DeleteRuleGroup — schemas: RuleGroupResponse, RuleGroupType, RuleCapacity'
+  reason: Firewall rule group lifecycle — network security control configuration.
+- tag: '#X Amz Target=NetworkFirewall 20201112.DeleteTLSInspectionConfiguration'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api-openapi.yml
+  capability_id: BC-620.50
+  capability_id_l1: BC-620
+  capability_name: Security Architecture Management
+  confidence: 0.7
+  evidence: 'DeleteTLSInspectionConfiguration — schemas: TLSInspectionConfigurationResponse, TlsCertificateData'
+  reason: Lifecycle of TLS inspection security configuration for the firewall.
+- tag: '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallDeleteProtection'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: UpdateFirewallDeleteProtection  Amazon Network Firewall Update Firewall Delete Protection
+  reason: Managed network firewall configuration operation; a security control administration surface.
+    L1 Cybersecurity Management is defensible; no L2 fits cleanly (network security control config rather
+    than IAM or threat detection).
+- tag: '#X Amz Target=NetworkFirewall 20201112.UpdateFirewallEncryptionConfiguration'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: 'UpdateFirewallEncryptionConfiguration ... schemas: EncryptionConfiguration, KeyId, EncryptionType'
+  reason: Encryption key configuration for firewall resources — a security control setting; L1 Cybersecurity
+    Management fits, no L2 (key management is not enumerated).
+- tag: '#X Amz Target=NetworkFirewall 20201112.UpdateRuleGroup'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: 'UpdateRuleGroup ... schemas: StatefulRuleProtocol, IPSet, RuleOption, StatefulAction'
+  reason: Maintains intrusion-prevention/filtering rule sets — network security control management, L1
+    Cybersecurity Management.
+- tag: '#X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration'
+  spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: 'UpdateTLSInspectionConfiguration ... schemas: TLSInspectionConfiguration, ServerCertificate,
+    ServerCertificateScope'
+  reason: TLS inspection configuration for traffic decryption/inspection is a network security control;
+    L1 Cybersecurity Management.

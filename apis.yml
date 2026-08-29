@@ -870,6 +870,9 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/network-firewall/faqs/
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-network-firewall-capability-edges.yml
+    name: Amazon Network Firewall Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-network-firewall/overview
   - type: AgenticAccess
