@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration API'
+  title: 'AWS Network Firewall #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.AssociateFirewallPolicy #X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration #X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration #X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration API'
   description: '<p>This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. </p> <ul> <li> <p>The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web Services APIs</a>. </p> <p>To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com </code> </p> </li> <li> <p>Alternatively, you can use one of the Amazon Web Services SDKs to access an API that''s tailored to the programming language or platform that you''re using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon Web Services SDKs</a>.</p> </li> <li> <p>For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/">Network Firewall Developer Guide</a>.</p> </li> </ul> <p>Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a href="https://suricata.io/">Suricata website</a>.</p> <p>You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: </p> <ul> <li> <p>Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.</p> </li> <li> <p>Use custom lists of known bad domains to limit the types of domain names that your applications can access.</p> </li> <li> <p>Perform deep packet inspection on traffic entering or leaving your VPC.</p> </li> <li> <p>Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.</p> </li> </ul> <p>To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/">Amazon VPC User Guide</a>.</p> <p>To start using Network Firewall, do the following: </p> <ol> <li> <p>(Optional) If you don''t already have a VPC that you want to protect, create it in Amazon VPC. </p> </li> <li> <p>In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. </p> </li> <li> <p>In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. </p> </li> <li> <p>In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. </p> </li> <li> <p>In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that''s defined in the firewall policy.</p> </li> <li> <p>In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.</p> </li> </ol>'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -192,15 +192,249 @@ paths:
       - '#X Amz Target=NetworkFirewall 20201112.UpdateTLSInspectionConfiguration'
 components:
   schemas:
-    ResourceNotFoundException: {}
+    ResourceStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - DELETING
+    UpdateTLSInspectionConfigurationRequest:
+      type: object
+      required:
+      - TLSInspectionConfiguration
+      - UpdateToken
+      title: UpdateTLSInspectionConfigurationRequest
+      properties:
+        TLSInspectionConfigurationArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: The Amazon Resource Name (ARN) of the TLS inspection configuration.
+        TLSInspectionConfigurationName:
+          allOf:
+          - $ref: '#/components/schemas/ResourceName'
+          - description: The descriptive name of the TLS inspection configuration. You can't change the name of a TLS inspection configuration after you create it.
+        TLSInspectionConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/TLSInspectionConfiguration'
+          - description: <p>The object that defines a TLS inspection configuration. This, along with <a>TLSInspectionConfigurationResponse</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. </p> <p>Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall re-encrypts the traffic before sending it to its destination.</p> <p>To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall policy in more than one firewall. For more information about using TLS inspection configurations, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.</p>
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: 'A description of the TLS inspection configuration. '
+        EncryptionConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionConfiguration'
+          - description: A complex type that contains the Amazon Web Services KMS encryption configuration settings for your TLS inspection configuration.
+        UpdateToken:
+          allOf:
+          - $ref: '#/components/schemas/UpdateToken'
+          - description: <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the TLS inspection configuration. The token marks the state of the TLS inspection configuration resource at the time of the request. </p> <p>To make changes to the TLS inspection configuration, you provide the token in your request. Network Firewall uses the token to ensure that the TLS inspection configuration hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the TLS inspection configuration again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    UpdateTLSInspectionConfigurationResponse:
+      type: object
+      required:
+      - UpdateToken
+      - TLSInspectionConfigurationResponse
+      properties:
+        UpdateToken:
+          allOf:
+          - $ref: '#/components/schemas/UpdateToken'
+          - description: <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the TLS inspection configuration. The token marks the state of the TLS inspection configuration resource at the time of the request. </p> <p>To make changes to the TLS inspection configuration, you provide the token in your request. Network Firewall uses the token to ensure that the TLS inspection configuration hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the TLS inspection configuration again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+        TLSInspectionConfigurationResponse:
+          allOf:
+          - $ref: '#/components/schemas/TLSInspectionConfigurationResponse'
+          - description: 'The high-level properties of a TLS inspection configuration. This, along with the <a>TLSInspectionConfiguration</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. '
+    TLSInspectionConfiguration:
+      type: object
+      properties:
+        ServerCertificateConfigurations:
+          allOf:
+          - $ref: '#/components/schemas/ServerCertificateConfigurations'
+          - description: Lists the server certificate configurations that are associated with the TLS configuration.
+      description: <p>The object that defines a TLS inspection configuration. This, along with <a>TLSInspectionConfigurationResponse</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. </p> <p>Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall re-encrypts the traffic before sending it to its destination.</p> <p>To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall policy in more than one firewall. For more information about using TLS inspection configurations, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.</p>
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.
+      description: 'A key:value pair associated with an Amazon Web Services resource. The key:value pair can be anything you define. Typically, the tag key represents a category (such as "environment") and the tag value represents a specific value within that category (such as "test," "development," or "production"). You can add up to 50 tags to each Amazon Web Services resource. '
     ServerCertificateConfigurations:
       type: array
       items:
         $ref: '#/components/schemas/ServerCertificateConfiguration'
+    InvalidRequestException: {}
+    PortRanges:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortRange'
+    KeyId:
+      type: string
+      pattern: .*\S.*
+      minLength: 1
+      maxLength: 2048
+    ServerCertificate:
+      type: object
+      properties:
+        ResourceArn:
+          allOf:
+          - $ref: '#/components/schemas/ResourceArn'
+          - description: The Amazon Resource Name (ARN) of the Certificate Manager SSL/TLS server certificate.
+      description: Any Certificate Manager Secure Sockets Layer/Transport Layer Security (SSL/TLS) server certificate that's associated with a <a>ServerCertificateConfiguration</a> used in a <a>TLSInspectionConfiguration</a>. You must request or import a SSL/TLS certificate into ACM for each domain Network Firewall needs to decrypt and inspect. Network Firewall uses the SSL/TLS certificates to decrypt specified inbound SSL/TLS traffic going to your firewall. For information about working with certificates in Certificate Manager, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html">Request a public certificate </a> or <a href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing certificates</a> in the <i>Certificate Manager User Guide</i>.
+    EncryptionConfiguration:
+      type: object
+      required:
+      - Type
+      properties:
+        KeyId:
+          allOf:
+          - $ref: '#/components/schemas/KeyId'
+          - description: The ID of the Amazon Web Services Key Management Service (KMS) customer managed key. You can use any of the key identifiers that KMS supports, unless you're using a key that's managed by another account. If you're using a key managed by another account, then specify the key ARN. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key ID</a> in the <i>Amazon Web Services KMS Developer Guide</i>.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionType'
+          - description: The type of Amazon Web Services KMS key to use for encryption of your Network Firewall resources.
+      description: A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.
+    ProtocolNumber:
+      type: integer
+      minimum: 0
+      maximum: 255
+    ServerCertificateScope:
+      type: object
+      properties:
+        Sources:
+          allOf:
+          - $ref: '#/components/schemas/Addresses'
+          - description: The source IP addresses and address ranges to decrypt for inspection, in CIDR notation. If not specified, this matches with any source address.
+        Destinations:
+          allOf:
+          - $ref: '#/components/schemas/Addresses'
+          - description: The destination IP addresses and address ranges to decrypt for inspection, in CIDR notation. If not specified, this matches with any destination address.
+        SourcePorts:
+          allOf:
+          - $ref: '#/components/schemas/PortRanges'
+          - description: <p>The source ports to decrypt for inspection, in Transmission Control Protocol (TCP) format. If not specified, this matches with any source port.</p> <p>You can specify individual ports, for example <code>1994</code>, and you can specify port ranges, such as <code>1990:1994</code>.</p>
+        DestinationPorts:
+          allOf:
+          - $ref: '#/components/schemas/PortRanges'
+          - description: <p>The destination ports to decrypt for inspection, in Transmission Control Protocol (TCP) format. If not specified, this matches with any destination port.</p> <p>You can specify individual ports, for example <code>1994</code>, and you can specify port ranges, such as <code>1990:1994</code>.</p>
+        Protocols:
+          allOf:
+          - $ref: '#/components/schemas/ProtocolNumbers'
+          - description: The protocols to decrypt for inspection, specified using each protocol's assigned internet protocol number (IANA). Network Firewall currently supports only TCP.
+      description: Settings that define the Secure Sockets Layer/Transport Layer Security (SSL/TLS) traffic that Network Firewall should decrypt for inspection by the stateful rule engine.
+    LastUpdateTime:
+      type: string
+      format: date-time
+    Addresses:
+      type: array
+      items:
+        $ref: '#/components/schemas/Address'
+    ProtocolNumbers:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProtocolNumber'
+    ResourceNotFoundException: {}
+    Certificates:
+      type: array
+      items:
+        $ref: '#/components/schemas/TlsCertificateData'
+    Description:
+      type: string
+      pattern: ^.*$
+      maxLength: 512
+    ResourceArn:
+      type: string
+      pattern: ^arn:aws.*
+      minLength: 1
+      maxLength: 256
     ServerCertificateScopes:
       type: array
       items:
         $ref: '#/components/schemas/ServerCertificateScope'
+    AddressDefinition:
+      type: string
+      pattern: ^([a-fA-F\d:\.]+($|/\d{1,3}))$
+      minLength: 1
+      maxLength: 255
+    InvalidTokenException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+      maxItems: 200
+    UpdateToken:
+      type: string
+      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
+      minLength: 1
+      maxLength: 1024
+    InternalServerError: {}
+    PortRange:
+      type: object
+      required:
+      - FromPort
+      - ToPort
+      properties:
+        FromPort:
+          allOf:
+          - $ref: '#/components/schemas/PortRangeBound'
+          - description: 'The lower limit of the port range. This must be less than or equal to the <code>ToPort</code> specification. '
+        ToPort:
+          allOf:
+          - $ref: '#/components/schemas/PortRangeBound'
+          - description: 'The upper limit of the port range. This must be greater than or equal to the <code>FromPort</code> specification. '
+      description: 'A single port range specification. This is used for source and destination port ranges in the stateless rule <a>MatchAttributes</a>, <code>SourcePorts</code>, and <code>DestinationPorts</code> settings. '
+    NumberOfAssociations:
+      type: integer
+    CollectionMember_String:
+      type: string
+    EncryptionType:
+      type: string
+      enum:
+      - CUSTOMER_KMS
+      - AWS_OWNED_KMS_KEY
+    ServerCertificates:
+      type: array
+      items:
+        $ref: '#/components/schemas/ServerCertificate'
+    Address:
+      type: object
+      required:
+      - AddressDefinition
+      properties:
+        AddressDefinition:
+          allOf:
+          - $ref: '#/components/schemas/AddressDefinition'
+          - description: '<p>Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR) notation. Network Firewall supports all address ranges for IPv4 and IPv6. </p> <p>Examples: </p> <ul> <li> <p>To configure Network Firewall to inspect for the IP address 192.0.2.44, specify <code>192.0.2.44/32</code>.</p> </li> <li> <p>To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255, specify <code>192.0.2.0/24</code>.</p> </li> <li> <p>To configure Network Firewall to inspect for the IP address 1111:0000:0000:0000:0000:0000:0000:0111, specify <code>1111:0000:0000:0000:0000:0000:0000:0111/128</code>.</p> </li> <li> <p>To configure Network Firewall to inspect for IP addresses from 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify <code>1111:0000:0000:0000:0000:0000:0000:0000/64</code>.</p> </li> </ul> <p>For more information about CIDR notation, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.</p>'
+      description: A single IP address specification. This is used in the <a>MatchAttributes</a> source and destination specifications.
+    TagValue:
+      type: string
+      pattern: ^.*$
+      minLength: 0
+      maxLength: 256
+    ServerCertificateConfiguration:
+      type: object
+      properties:
+        ServerCertificates:
+          allOf:
+          - $ref: '#/components/schemas/ServerCertificates'
+          - description: The list of a server certificate configuration's Certificate Manager SSL/TLS certificates.
+        Scopes:
+          allOf:
+          - $ref: '#/components/schemas/ServerCertificateScopes'
+          - description: A list of a server certificate configuration's scopes.
+      description: <p>Configures the associated Certificate Manager Secure Sockets Layer/Transport Layer Security (SSL/TLS) server certificates and scope settings Network Firewall uses to decrypt traffic in a <a>TLSInspectionConfiguration</a>. For information about working with SSL/TLS certificates for TLS inspection, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html"> Requirements for using SSL/TLS server certficiates with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.</p> <note> <p>If a server certificate that's associated with your <a>TLSInspectionConfiguration</a> is revoked, deleted, or expired it can result in client-side TLS errors.</p> </note>
+    PortRangeBound:
+      type: integer
+      minimum: 0
+      maximum: 65535
     TLSInspectionConfigurationResponse:
       type: object
       required:
@@ -249,247 +483,6 @@ components:
           - $ref: '#/components/schemas/Certificates'
           - description: A list of the certificates associated with the TLS inspection configuration.
       description: The high-level properties of a TLS inspection configuration. This, along with the <code>TLSInspectionConfiguration</code>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <code>DescribeTLSInspectionConfiguration</code>.
-    TagKey:
-      type: string
-      pattern: ^.*$
-      minLength: 1
-      maxLength: 128
-    ThrottlingException: {}
-    ProtocolNumbers:
-      type: array
-      items:
-        $ref: '#/components/schemas/ProtocolNumber'
-    ProtocolNumber:
-      type: integer
-      minimum: 0
-      maximum: 255
-    ResourceStatus:
-      type: string
-      enum:
-      - ACTIVE
-      - DELETING
-    PortRanges:
-      type: array
-      items:
-        $ref: '#/components/schemas/PortRange'
-    Description:
-      type: string
-      pattern: ^.*$
-      maxLength: 512
-    Certificates:
-      type: array
-      items:
-        $ref: '#/components/schemas/TlsCertificateData'
-    PortRange:
-      type: object
-      required:
-      - FromPort
-      - ToPort
-      properties:
-        FromPort:
-          allOf:
-          - $ref: '#/components/schemas/PortRangeBound'
-          - description: 'The lower limit of the port range. This must be less than or equal to the <code>ToPort</code> specification. '
-        ToPort:
-          allOf:
-          - $ref: '#/components/schemas/PortRangeBound'
-          - description: 'The upper limit of the port range. This must be greater than or equal to the <code>FromPort</code> specification. '
-      description: 'A single port range specification. This is used for source and destination port ranges in the stateless rule <a>MatchAttributes</a>, <code>SourcePorts</code>, and <code>DestinationPorts</code> settings. '
-    StatusReason:
-      type: string
-      pattern: ^[a-zA-Z0-9- ]+$
-      minLength: 1
-      maxLength: 256
-    InvalidRequestException: {}
-    ResourceId:
-      type: string
-      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
-      minLength: 36
-      maxLength: 36
-    CollectionMember_String:
-      type: string
-    LastUpdateTime:
-      type: string
-      format: date-time
-    InternalServerError: {}
-    EncryptionConfiguration:
-      type: object
-      required:
-      - Type
-      properties:
-        KeyId:
-          allOf:
-          - $ref: '#/components/schemas/KeyId'
-          - description: The ID of the Amazon Web Services Key Management Service (KMS) customer managed key. You can use any of the key identifiers that KMS supports, unless you're using a key that's managed by another account. If you're using a key managed by another account, then specify the key ARN. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key ID</a> in the <i>Amazon Web Services KMS Developer Guide</i>.
-        Type:
-          allOf:
-          - $ref: '#/components/schemas/EncryptionType'
-          - description: The type of Amazon Web Services KMS key to use for encryption of your Network Firewall resources.
-      description: A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.
-    PortRangeBound:
-      type: integer
-      minimum: 0
-      maximum: 65535
-    Addresses:
-      type: array
-      items:
-        $ref: '#/components/schemas/Address'
-    KeyId:
-      type: string
-      pattern: .*\S.*
-      minLength: 1
-      maxLength: 2048
-    EncryptionType:
-      type: string
-      enum:
-      - CUSTOMER_KMS
-      - AWS_OWNED_KMS_KEY
-    ServerCertificateScope:
-      type: object
-      properties:
-        Sources:
-          allOf:
-          - $ref: '#/components/schemas/Addresses'
-          - description: The source IP addresses and address ranges to decrypt for inspection, in CIDR notation. If not specified, this matches with any source address.
-        Destinations:
-          allOf:
-          - $ref: '#/components/schemas/Addresses'
-          - description: The destination IP addresses and address ranges to decrypt for inspection, in CIDR notation. If not specified, this matches with any destination address.
-        SourcePorts:
-          allOf:
-          - $ref: '#/components/schemas/PortRanges'
-          - description: <p>The source ports to decrypt for inspection, in Transmission Control Protocol (TCP) format. If not specified, this matches with any source port.</p> <p>You can specify individual ports, for example <code>1994</code>, and you can specify port ranges, such as <code>1990:1994</code>.</p>
-        DestinationPorts:
-          allOf:
-          - $ref: '#/components/schemas/PortRanges'
-          - description: <p>The destination ports to decrypt for inspection, in Transmission Control Protocol (TCP) format. If not specified, this matches with any destination port.</p> <p>You can specify individual ports, for example <code>1994</code>, and you can specify port ranges, such as <code>1990:1994</code>.</p>
-        Protocols:
-          allOf:
-          - $ref: '#/components/schemas/ProtocolNumbers'
-          - description: The protocols to decrypt for inspection, specified using each protocol's assigned internet protocol number (IANA). Network Firewall currently supports only TCP.
-      description: Settings that define the Secure Sockets Layer/Transport Layer Security (SSL/TLS) traffic that Network Firewall should decrypt for inspection by the stateful rule engine.
-    UpdateToken:
-      type: string
-      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
-      minLength: 1
-      maxLength: 1024
-    ResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9-]+$
-      minLength: 1
-      maxLength: 128
-    ResourceArn:
-      type: string
-      pattern: ^arn:aws.*
-      minLength: 1
-      maxLength: 256
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.
-      description: 'A key:value pair associated with an Amazon Web Services resource. The key:value pair can be anything you define. Typically, the tag key represents a category (such as "environment") and the tag value represents a specific value within that category (such as "test," "development," or "production"). You can add up to 50 tags to each Amazon Web Services resource. '
-    NumberOfAssociations:
-      type: integer
-    ServerCertificateConfiguration:
-      type: object
-      properties:
-        ServerCertificates:
-          allOf:
-          - $ref: '#/components/schemas/ServerCertificates'
-          - description: The list of a server certificate configuration's Certificate Manager SSL/TLS certificates.
-        Scopes:
-          allOf:
-          - $ref: '#/components/schemas/ServerCertificateScopes'
-          - description: A list of a server certificate configuration's scopes.
-      description: <p>Configures the associated Certificate Manager Secure Sockets Layer/Transport Layer Security (SSL/TLS) server certificates and scope settings Network Firewall uses to decrypt traffic in a <a>TLSInspectionConfiguration</a>. For information about working with SSL/TLS certificates for TLS inspection, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html"> Requirements for using SSL/TLS server certficiates with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.</p> <note> <p>If a server certificate that's associated with your <a>TLSInspectionConfiguration</a> is revoked, deleted, or expired it can result in client-side TLS errors.</p> </note>
-    TLSInspectionConfiguration:
-      type: object
-      properties:
-        ServerCertificateConfigurations:
-          allOf:
-          - $ref: '#/components/schemas/ServerCertificateConfigurations'
-          - description: Lists the server certificate configurations that are associated with the TLS configuration.
-      description: <p>The object that defines a TLS inspection configuration. This, along with <a>TLSInspectionConfigurationResponse</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. </p> <p>Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall re-encrypts the traffic before sending it to its destination.</p> <p>To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall policy in more than one firewall. For more information about using TLS inspection configurations, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.</p>
-    TagValue:
-      type: string
-      pattern: ^.*$
-      minLength: 0
-      maxLength: 256
-    AddressDefinition:
-      type: string
-      pattern: ^([a-fA-F\d:\.]+($|/\d{1,3}))$
-      minLength: 1
-      maxLength: 255
-    ServerCertificates:
-      type: array
-      items:
-        $ref: '#/components/schemas/ServerCertificate'
-    ServerCertificate:
-      type: object
-      properties:
-        ResourceArn:
-          allOf:
-          - $ref: '#/components/schemas/ResourceArn'
-          - description: The Amazon Resource Name (ARN) of the Certificate Manager SSL/TLS server certificate.
-      description: Any Certificate Manager Secure Sockets Layer/Transport Layer Security (SSL/TLS) server certificate that's associated with a <a>ServerCertificateConfiguration</a> used in a <a>TLSInspectionConfiguration</a>. You must request or import a SSL/TLS certificate into ACM for each domain Network Firewall needs to decrypt and inspect. Network Firewall uses the SSL/TLS certificates to decrypt specified inbound SSL/TLS traffic going to your firewall. For information about working with certificates in Certificate Manager, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html">Request a public certificate </a> or <a href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing certificates</a> in the <i>Certificate Manager User Guide</i>.
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 1
-      maxItems: 200
-    UpdateTLSInspectionConfigurationRequest:
-      type: object
-      required:
-      - TLSInspectionConfiguration
-      - UpdateToken
-      title: UpdateTLSInspectionConfigurationRequest
-      properties:
-        TLSInspectionConfigurationArn:
-          allOf:
-          - $ref: '#/components/schemas/ResourceArn'
-          - description: The Amazon Resource Name (ARN) of the TLS inspection configuration.
-        TLSInspectionConfigurationName:
-          allOf:
-          - $ref: '#/components/schemas/ResourceName'
-          - description: The descriptive name of the TLS inspection configuration. You can't change the name of a TLS inspection configuration after you create it.
-        TLSInspectionConfiguration:
-          allOf:
-          - $ref: '#/components/schemas/TLSInspectionConfiguration'
-          - description: <p>The object that defines a TLS inspection configuration. This, along with <a>TLSInspectionConfigurationResponse</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. </p> <p>Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall re-encrypts the traffic before sending it to its destination.</p> <p>To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall policy in more than one firewall. For more information about using TLS inspection configurations, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.</p>
-        Description:
-          allOf:
-          - $ref: '#/components/schemas/Description'
-          - description: 'A description of the TLS inspection configuration. '
-        EncryptionConfiguration:
-          allOf:
-          - $ref: '#/components/schemas/EncryptionConfiguration'
-          - description: A complex type that contains the Amazon Web Services KMS encryption configuration settings for your TLS inspection configuration.
-        UpdateToken:
-          allOf:
-          - $ref: '#/components/schemas/UpdateToken'
-          - description: <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the TLS inspection configuration. The token marks the state of the TLS inspection configuration resource at the time of the request. </p> <p>To make changes to the TLS inspection configuration, you provide the token in your request. Network Firewall uses the token to ensure that the TLS inspection configuration hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the TLS inspection configuration again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
-    Address:
-      type: object
-      required:
-      - AddressDefinition
-      properties:
-        AddressDefinition:
-          allOf:
-          - $ref: '#/components/schemas/AddressDefinition'
-          - description: '<p>Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR) notation. Network Firewall supports all address ranges for IPv4 and IPv6. </p> <p>Examples: </p> <ul> <li> <p>To configure Network Firewall to inspect for the IP address 192.0.2.44, specify <code>192.0.2.44/32</code>.</p> </li> <li> <p>To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255, specify <code>192.0.2.0/24</code>.</p> </li> <li> <p>To configure Network Firewall to inspect for the IP address 1111:0000:0000:0000:0000:0000:0000:0111, specify <code>1111:0000:0000:0000:0000:0000:0000:0111/128</code>.</p> </li> <li> <p>To configure Network Firewall to inspect for IP addresses from 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify <code>1111:0000:0000:0000:0000:0000:0000:0000/64</code>.</p> </li> </ul> <p>For more information about CIDR notation, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.</p>'
-      description: A single IP address specification. This is used in the <a>MatchAttributes</a> source and destination specifications.
-    InvalidTokenException: {}
     TlsCertificateData:
       type: object
       properties:
@@ -510,41 +503,42 @@ components:
           - $ref: '#/components/schemas/StatusReason'
           - description: Contains details about the certificate status, including information about certificate errors.
       description: Contains metadata about an Certificate Manager certificate.
-    UpdateTLSInspectionConfigurationResponse:
-      type: object
-      required:
-      - UpdateToken
-      - TLSInspectionConfigurationResponse
-      properties:
-        UpdateToken:
-          allOf:
-          - $ref: '#/components/schemas/UpdateToken'
-          - description: <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the TLS inspection configuration. The token marks the state of the TLS inspection configuration resource at the time of the request. </p> <p>To make changes to the TLS inspection configuration, you provide the token in your request. Network Firewall uses the token to ensure that the TLS inspection configuration hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the TLS inspection configuration again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
-        TLSInspectionConfigurationResponse:
-          allOf:
-          - $ref: '#/components/schemas/TLSInspectionConfigurationResponse'
-          - description: 'The high-level properties of a TLS inspection configuration. This, along with the <a>TLSInspectionConfiguration</a>, define the TLS inspection configuration. You can retrieve all objects for a TLS inspection configuration by calling <a>DescribeTLSInspectionConfiguration</a>. '
+    StatusReason:
+      type: string
+      pattern: ^[a-zA-Z0-9- ]+$
+      minLength: 1
+      maxLength: 256
+    ResourceId:
+      type: string
+      pattern: ^([0-9a-f]{8})-([0-9a-f]{4}-){3}([0-9a-f]{12})$
+      minLength: 36
+      maxLength: 36
+    ThrottlingException: {}
+    TagKey:
+      type: string
+      pattern: ^.*$
+      minLength: 1
+      maxLength: 128
+    ResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9-]+$
+      minLength: 1
+      maxLength: 128
   parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -555,14 +549,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
