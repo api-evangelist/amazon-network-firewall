@@ -11,8 +11,19 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 21
+edge_count: 22
 edges:
+- tag: AWS Network Firewall
+  spec_file: amazon-network-firewall-aws-network-firewall-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.85
+  evidence: CreateFirewall, CreateFirewallPolicy, CreateRuleGroup, CreateTLSInspectionConfiguration —
+    "a stateful, managed, network firewall and intrusion detection and prevention service"
+  reason: Operations configure firewalls, firewall policies, rule groups and TLS inspection — clearly
+    cybersecurity control management. Sub-capability is ambiguous between security architecture and threat
+    detection, so L1 only.
 - tag: '#X Amz Target=NetworkFirewall 20201112.DescribeRuleGroup'
   spec_file: amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api-openapi.yml
   capability_id: BC-620
