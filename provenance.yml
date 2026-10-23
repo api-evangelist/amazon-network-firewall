@@ -13,221 +13,221 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-network-firewall.opencollection.json:
     method: derived
     evidence: openapi/amazon-network-firewall
@@ -2403,127 +2403,7 @@ artifacts:
   json-structure/openapi-vpc-ids-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -2607,229 +2487,139 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/amazon-network-firewall-openapi.yml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  ? openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api-openapi.yml
-  : method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api-openapi.yml:
+  openapi/amazon-network-firewall-aws-network-firewall-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/amazon-network-firewall-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-associatesubnets-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewall-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createfirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createrulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-createtlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewall-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleteresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deleterulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-deletetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewall-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeloggingconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describeresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describerulegroupmetadata-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-describetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-disassociatesubnets-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewallpolicies-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listfirewalls-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listrulegroups-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-listtlsinspectionconfigurations-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-putresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldeleteprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewalldescription-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallencryptionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicy-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatefirewallpolicychangeprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updateloggingconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updaterulegroup-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatesubnetchangeprotection-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-network-firewall-x-amz-target-networkfirewall-20201112-updatetlsinspectionconfiguration-api
+  : method: unknown
+    evidence: no authorship recorded
   rate-limits/amazon-network-firewall-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
