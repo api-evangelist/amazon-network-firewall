@@ -1,0 +1,116 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/network-firewall/pricing/
+sources:
+- https://aws.amazon.com/network-firewall/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: Main pricing table renders via dynamic region tokens; numeric prices only appear in worked examples
+  (US East N. Virginia, Europe Ireland, Asia Pacific Sydney, US West Oregon). NAT gateway discount waives
+  matching NAT gateway hours/GB.
+plan_count: 6
+currency: USD
+plans:
+- name: Network Firewall Endpoint (hourly)
+  price_text: $0.395 for each hour your firewall endpoint is provisioned
+  price: 0.395
+  currency: USD
+  period: per-use
+  unit: per endpoint-hour
+- name: Network Firewall Traffic Processing
+  price_text: $0.065 for 1 GB of data processed by the firewall
+  price: 0.065
+  currency: USD
+  period: per-use
+  unit: per GB
+- name: Network Firewall Secondary Endpoint
+  price_text: $0.158 per secondary endpoint per hour
+  price: 0.158
+  currency: USD
+  period: per-use
+  unit: per endpoint-hour
+- name: Advanced Inspection Endpoint (Europe Ireland)
+  price_text: $0.489 for each hour your firewall endpoint is provisioned in Europe (Ireland)
+  price: 0.489
+  currency: USD
+  period: per-use
+  unit: per endpoint-hour
+- name: Advanced Inspection Endpoint (Asia Pacific Sydney)
+  price_text: $0.711 for each hour your firewall endpoint is provisioned in Asia Pacific (Sydney)
+  price: 0.711
+  currency: USD
+  period: per-use
+  unit: per endpoint-hour
+- name: Advanced Threat Protection Traffic Processing
+  price_text: $0.005 for 1 GB of data processed by the firewall
+  price: 0.005
+  currency: USD
+  period: per-use
+  unit: per GB
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  units:
+  - compute
+  - data
+  plans:
+  - name: Network Firewall Endpoint (hourly)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Network Firewall Traffic Processing
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Network Firewall Secondary Endpoint
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Advanced Inspection Endpoint (Europe Ireland)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Advanced Inspection Endpoint (Asia Pacific Sydney)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Advanced Threat Protection Traffic Processing
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other

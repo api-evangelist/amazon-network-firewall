@@ -1,0 +1,254 @@
+aid: amazon-network-firewall
+name: Amazon Network Firewall
+description: >-
+  AWS Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for your
+  virtual private cloud (VPC). It enables you to filter traffic at the perimeter of your VPC with a flexible rules
+  engine with support for thousands of custom rules.
+type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  - security
+  generated: '2026-09-03'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-network-firewall.png
+tags:
+  - Amazon Web Services
+  - Firewall
+  - Intrusion Detection
+  - Network Security
+  - VPC
+tags_raw:
+  - AWS
+  - Firewall
+  - Intrusion Detection
+  - Network Security
+  - VPC
+url: https://raw.githubusercontent.com/api-evangelist/amazon-network-firewall/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-05-19'
+specificationVersion: '0.23'
+apis:
+- aid: amazon-network-firewall:amazon-network-firewall-aws-network-firewall-api
+  name: Amazon Network Firewall AWS Network Firewall API
+  description: >-
+    The AWS Network Firewall API from Amazon Network Firewall — 36 operation(s) for aws network firewall.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - AWS Network Firewall
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-aws-network-firewall-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/network-firewall/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/network-firewall/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/network-firewall/faqs/
+- aid: >-
+    amazon-network-firewall:amazon-network-firewall-network-firewall-transit-gateway-attachment-api
+  name: Amazon Network Firewall Network Firewall Network Firewall Transit Gateway Attachment API
+  description: >-
+    The Network Firewall Network Firewall Transit Gateway Attachment API from Amazon Network Firewall
+    — 3 operation(s) for network firewall network firewall transit gateway attachment.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags: []
+  tags_raw:
+  - Network Firewall Network Firewall Transit Gateway Attachment
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-network-firewall-network-firewall-transit-gateway-attachment-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-container-association-api
+  name: Amazon Network Firewall Network Firewall Container Association API
+  description: >-
+    The Network Firewall Container Association API from Amazon Network Firewall — 5 operation(s) for network
+    firewall container association.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Container Association
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-container-association-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-operations-api
+  name: Amazon Network Firewall Network Firewall Operations API
+  description: >-
+    The Network Firewall Operations API from Amazon Network Firewall — 19 operation(s) for network firewall
+    operations.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-operations-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-proxy-api
+  name: Amazon Network Firewall Network Firewall Proxy API
+  description: >-
+    The Network Firewall Proxy API from Amazon Network Firewall — 5 operation(s) for network firewall
+    proxy.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Proxy
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-proxy-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-proxy-configuration-api
+  name: Amazon Network Firewall Network Firewall Proxy Configuration API
+  description: >-
+    The Network Firewall Proxy Configuration API from Amazon Network Firewall — 5 operation(s) for network
+    firewall proxy configuration.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Proxy Configuration
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-proxy-configuration-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-proxy-rule-api
+  name: Amazon Network Firewall Network Firewall Proxy Rule API
+  description: >-
+    The Network Firewall Proxy Rule API from Amazon Network Firewall — 4 operation(s) for network firewall
+    proxy rule.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Proxy Rule
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-proxy-rule-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-proxy-rule-group-api
+  name: Amazon Network Firewall Network Firewall Proxy Rule Group API
+  description: >-
+    The Network Firewall Proxy Rule Group API from Amazon Network Firewall — 4 operation(s) for network
+    firewall proxy rule group.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Proxy Rule Group
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-proxy-rule-group-api-openapi.yml
+- aid: amazon-network-firewall:amazon-network-firewall-vpc-endpoint-association-api
+  name: Amazon Network Firewall Network Firewall Vpc Endpoint Association API
+  description: >-
+    The Network Firewall Vpc Endpoint Association API from Amazon Network Firewall — 4 operation(s) for
+    network firewall vpc endpoint association.
+  humanURL: https://aws.amazon.com/network-firewall/
+  baseURL: https://network-firewall.amazonaws.com
+  tags:
+  - Network Firewall Vpc Endpoint Association
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-network-firewall-vpc-endpoint-association-api-openapi.yml
+common:
+  - type: Plans
+    url: plans/amazon-network-firewall-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/amazon-network-firewall-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-network-firewall-finops.yml
+  - type: CapabilityMap
+    url: capabilities/amazon-network-firewall-capability-edges.yml
+    name: Amazon Network Firewall Business Capability Map
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-network-firewall/overview
+  - type: AgenticAccess
+    url: agentic-access/amazon-network-firewall-agentic-access.yml
+  - type: TrustCenter
+    url: security/amazon-network-firewall-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-network-firewall-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-network-firewall-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-network-firewall-authentication.yml
+  - type: Portal
+    url: https://aws.amazon.com/network-firewall/
+  - type: Website
+    url: https://aws.amazon.com/network-firewall/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/network-firewall/
+  - type: TermsOfService
+    url: https://aws.amazon.com/service-terms/
+  - type: PrivacyPolicy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: Blog
+    url: https://aws.amazon.com/blogs/networking-and-content-delivery/tag/aws-network-firewall/
+  - type: GitHubOrganization
+    url: https://github.com/aws
+  - type: Console
+    url: https://console.aws.amazon.com/vpc/network-firewall/
+  - type: Signup
+    url: https://portal.aws.amazon.com/billing/signup
+  - type: Login
+    url: https://signin.aws.amazon.com/
+  - type: StatusPage
+    url: https://health.aws.amazon.com/health/status
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+  - type: SpectralRules
+    url: rules/amazon-network-firewall-spectral-rules.yml
+  - type: Vocabulary
+    url: vocabulary/amazon-network-firewall-vocabulary.yaml
+  - type: JSONLD
+    url: json-ld/amazon-network-firewall-openapi-context.jsonld
+  - type: JSONSchema
+    url: json-schema/openapi-action-definition-schema.json
+    title: Openapi Action Definition
+  - type: JSONSchema
+    url: json-schema/openapi-action-name-schema.json
+    title: Openapi Action Name
+  - type: JSONSchema
+    url: json-schema/openapi-address-definition-schema.json
+    title: Openapi Address Definition
+  - type: JSONSchema
+    url: json-schema/openapi-address-schema.json
+    title: Openapi Address
+  - type: JSONSchema
+    url: json-schema/openapi-addresses-schema.json
+    title: Openapi Addresses
+  - type: Integrations
+    url: https://aws.amazon.com/partners/
+integrations:
+  - name: Partner Programs
+  - name: Resources
+  - name: Success Stories
+  - name: Work with an AWS Partner
+  - name: AWS Marketplace
+  - name: AWS Partner Central
+  - name: Partner Paths
+  - name: co-sell with AWS
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-parent: amazon-web-services
+x-relationship: product
